@@ -8,9 +8,6 @@ Router.map ->
   @route "accountHospital",
     path: "/accounts"
 
-  @route "customerSignup",
-    path: "/customerm"
-
   @route "setUserName",
     path: "/setUserName"
     onBeforeAction: ->
