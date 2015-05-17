@@ -1,3 +1,7 @@
+ServicesSchema = new SimpleSchema(
+  serviceName: type: String
+  serviceFee: type: String)
+
 Schemas.UserProfile = new SimpleSchema(
 
   picture:
@@ -17,15 +21,25 @@ Schemas.UserProfile = new SimpleSchema(
     type: String
     optional: true
 
-  birthday:
-    type: Date
+  hospitalName:
+    type: String
     optional: true
 
-  bio:
+  description:
     type: String
     optional: true
     autoform:
       rows: 4
+
+  consultation_fee:
+    type: Number
+    optional: true
+
+  services:
+    type: [ServicesSchema]
+    optional: true
+  
+
 
   location:
     type: String
@@ -38,7 +52,7 @@ Schemas.UserProfile = new SimpleSchema(
 
   country:
     type: String
-    label: 'Nationality'
+    label: 'Country'
     allowedValues: [
       "Select Country"
       "Afghanistan"
