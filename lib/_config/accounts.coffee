@@ -51,7 +51,6 @@ AccountsTemplates.configureRoute 'signIn', redirect: ->
   return
 
 
-
 # AccountsTemplates.configure({
 #   confirmPassword: false,
 #   enablePasswordChange: true,

@@ -5,8 +5,8 @@
 				<div class="col-md-3">
 					{{> favoritesSidebar}}
 				</div>
-				<div class="col-md-9">
-					{{> profile}}
+				<div class="col-md-8">
+					{{> updateHospital}}
 				</div>
 			</div>
 		</div>
@@ -15,20 +15,11 @@
 
 
 
-<template name="profile">
-	<div class="container">
-		<div class="row" id="champion-messages">
-			{{#autoForm id="updatePicture" collection=Users doc=User type="update"}}
-			{{/autoForm}}
-			{{#autoForm id="updateProfile" collection=Users doc=User type="update"}}
-			<div class="col-md-8">
-				{{> afQuickField name='profile' omitFields="profile.picture"}}
-				<button type="submit" class="btn btn-primary">{{_ "update"}}</button>
-			</div>
-			{{/autoForm}}
-		</div>
-	</div>
+<template name="updateHospital">
+ {{> quickForm collection="Hospitals" doc=aHospital id="updateHospital" type="update"}}
+
 </template>
+
 
 <template name="addPost">
 	<div class="template-add-post">

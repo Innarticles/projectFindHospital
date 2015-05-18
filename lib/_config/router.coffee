@@ -37,5 +37,5 @@ Router.plugin 'ensureSignedIn', except: [
   'atSignOut'
   'signupForm'
   'loginForm'
+  'newAccount'
 ]
-

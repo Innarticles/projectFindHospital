@@ -1,4 +1,9 @@
 Accounts.onCreateUser (options, user) ->
+	if options.profile?.hospital
+		user.roles = ['hospital']
+	else
+		user.roles = ['customer']
+
 	profileImageUrl = undefined
 	user.profile = user.profile or {}
 

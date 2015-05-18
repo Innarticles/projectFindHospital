@@ -1,3 +1,7 @@
+ServicesSchema = new SimpleSchema(
+  serviceName: type: String
+  serviceFee: type: String)
+
 @Hospitals = new Meteor.Collection('hospitals');
 Schemas.Hospital = new SimpleSchema(
 

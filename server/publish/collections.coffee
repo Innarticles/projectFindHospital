@@ -5,7 +5,7 @@ Meteor.publish 'posts', ->
 	Posts.find()
 
 Meteor.publish 'hospitals', ->
-    Posts.find()
+    Hospitals.find()
 
 Meteor.publish 'attachments', ->
 	Attachments.find()
