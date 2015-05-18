@@ -11,9 +11,9 @@
 					</ul>
 
 					<ul class="nav hidden-xs" id="lg-menu">
-						<li class="active"><a href="#featured"><i class="glyphicon glyphicon-list-alt"></i> Appointments</a></li>
-						<li><a href="#stories"><i class="glyphicon glyphicon-list"></i> Profile</a></li>
-						<li><a href="#"><i class="glyphicon glyphicon-paperclip"></i> Edit Setting</a></li>
+						<li class="active"><a href="{{pathFor 'appointments'}}"><i class="glyphicon glyphicon-list-alt"></i> Appointments</a></li>
+						<li><a href="#"><i class="glyphicon glyphicon-list"></i> Profile</a></li>
+						<li><a href="{{pathFor 'updateHospital'}}"><i class="glyphicon glyphicon-paperclip"></i> Edit Setting</a></li>
 						<li><a href="#"><i class="glyphicon glyphicon-refresh"></i> Reviews</a></li>
 					</ul>
 					
@@ -26,7 +26,7 @@
 				</div>
 				<!-- main right col -->
 				<div class="column col-sm-10 col-xs-11" id="main">
-					<h1>This is the yield</h1>
+					{{> yield}}
 				</div>
 				<!-- /main -->
 			</div>

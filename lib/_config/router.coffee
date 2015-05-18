@@ -38,4 +38,5 @@ Router.plugin 'ensureSignedIn', except: [
   'signupForm'
   'loginForm'
   'newAccount'
+  'appointments'
 ]
