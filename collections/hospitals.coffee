@@ -1,8 +1,5 @@
-ServicesSchema = new SimpleSchema(
-  serviceName: type: String
-  serviceFee: type: String)
-
-Schemas.Hospitals = new SimpleSchema(
+@Hospitals = new Meteor.Collection('hospitals');
+Schemas.Hospital = new SimpleSchema(
 
   picture:
     type: String
@@ -267,43 +264,9 @@ Schemas.Hospitals = new SimpleSchema(
     optional: true
 )
 
-Schemas.User = new SimpleSchema(
 
-  username:
-    type: String
-    regEx: /^[a-z0-9A-Z_]{3,15}$/
-    optional: true
+Hospitals.attachSchema Schemas.Hospital
 
-  
-  emails:
-    type: [Object]
-    optional: true
-
-  "emails.$.address":
-    type: String
-    regEx: SimpleSchema.RegEx.Email
-
-  "emails.$.verified":
-    type: Boolean
-
-  createdAt:
-    type: Date
-
-  profile:
-    type: Schemas.UserProfile
-
-  services:
-    type: Object
-    optional: true
-    blackbox: true
-
-  roles:
-    type: [String]
-    blackbox: true
-    optional: true
-)
-
-Meteor.users.attachSchema Schemas.User
-
-# Export schemas
-@StarterSchemas = Schemas
+ServicesSchema = new SimpleSchema(
+  serviceName: type: String
+  serviceFee: type: String)

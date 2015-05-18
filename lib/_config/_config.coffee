@@ -4,11 +4,10 @@
 @Config =
 
 	# Basic Details
-	name: 'My App'
+	name: 'FindHospital.co'
 	title: ->
 			TAPi18n.__ 'configTitle'
-	subtitle: ->
-			TAPi18n.__ 'configSubtitle'
+	subtitle: -> 'Find Hospitals and Clinics to you and that fits your budget.'
 	logo: ->
 		'<b>' + @name + '</b>'
 	footer: ->
@@ -41,13 +40,13 @@
 
 	socialMedia:
 		facebook:
-			url: 'http://facebook.com/benjaminpeterjones'
+			url: 'http://facebook.com/FindHospital.co'
 			icon: 'facebook'
 		twitter:
-			url: 'http://twitter.com/BenPeterJones'
+			url: 'http://twitter.com/FindHospital.co'
 			icon: 'twitter'
 		github:
-			url: 'http://github.com/yogiben'
+			url: 'http://github.com/Innarticles'
 			icon: 'github'
 		info:
 			url: 'http://meteorfactory.io'

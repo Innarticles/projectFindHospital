@@ -7,6 +7,7 @@ Router.map ->
     path: "/dashboard"
     waitOn: ->
       [
+        subs.subscribe 'hospitals'
         subs.subscribe 'posts'
         subs.subscribe 'comments'
         subs.subscribe 'attachments'
