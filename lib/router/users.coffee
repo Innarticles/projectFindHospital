@@ -1,3 +1,4 @@
+
 Router.map ->
   @route "profile",
     path: "/profile"
@@ -5,8 +6,6 @@ Router.map ->
   @route "account",
     path: "/account"
 
-  @route "signupForm",
-    path: "/hospital/signup"
 
   @route "loginForm",
     path: "/hospital/signin"
@@ -24,3 +23,4 @@ Router.map ->
       Meteor.logout ->
       @redirect '/'
       @next()
+

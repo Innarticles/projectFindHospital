@@ -20,9 +20,14 @@
                     <a href="index.html#" class="home-navHandler visible-xs"><span class="fa fa-bars"></span></a>
                     <div class="home-nav">
                         <ul>
-                            <li><a href="index.html#" data-toggle="modal" data-target="#signup">Sign Up</a></li>
+                            {{#if currentUser}}
+
+                            {{else}}
+                                 <li><a href="index.html#" data-toggle="modal" data-target="#signup">Sign Up</a></li>
                             <li><a href="index.html#" data-toggle="modal" data-target="#signin">Sign In</a></li>
                             <li><a href="{{pathFor route='signupForm'}}" class="btn btn-green isThemeBtn">Hospital Signup</a></li>
+                            {{/if}}
+                           
                         </ul>
                     </div>
                 </div>

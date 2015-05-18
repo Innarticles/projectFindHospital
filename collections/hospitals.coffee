@@ -1,4 +1,8 @@
-Schemas.UserProfile = new SimpleSchema(
+ServicesSchema = new SimpleSchema(
+  serviceName: type: String
+  serviceFee: type: String)
+
+Schemas.Hospitals = new SimpleSchema(
 
   picture:
     type: String
@@ -9,23 +13,24 @@ Schemas.UserProfile = new SimpleSchema(
         type: 'fileUpload'
         collection: 'ProfilePictures'
 
-  firstName:
+  hospitalName:
     type: String
     optional: true
 
-  lastName:
-    type: String
-    optional: true
-
-  dateOfBirth:
-    type: Date
-    optional: true
-  bio:
+  description:
     type: String
     optional: true
     autoform:
       rows: 4
 
+  consultation_fee:
+    type: Number
+    optional: true
+
+  services:
+    type: [ServicesSchema]
+    optional: true
+  
   location:
     type: String
     optional: true
@@ -34,6 +39,18 @@ Schemas.UserProfile = new SimpleSchema(
       geolocation: true
       searchBox: true
       autolocate: true
+
+  owner: 
+    type: String
+    regEx: SimpleSchema.RegEx.Id
+    autoValue: ->
+      if this.isInsert
+        Meteor.userId()
+    autoform:
+      options: ->
+        _.map Meteor.users.find().fetch(), (user)->
+          label: user.emails[0].address
+          value: user._id
 
   country:
     type: String

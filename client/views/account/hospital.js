@@ -1,8 +1,8 @@
+
 Template.signupForm.events({
   "submit #signup-form": function(event, template) {
     event.preventDefault();
     console.log("reached here");
-    a = template;
     Accounts.createUser({
       email: template.find("#signup-email").value,
       password: template.find("#signup-password").value,
@@ -30,7 +30,7 @@ Template.loginForm.events({
           // Display the login error to the user however you want
         }
       }
-    );
+      );
   }
 });
 
