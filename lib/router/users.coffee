@@ -5,8 +5,11 @@ Router.map ->
   @route "account",
     path: "/account"
 
-  @route "accountHospital",
-    path: "/accounts"
+  @route "signupForm",
+    path: "/hospital/signup"
+
+  @route "loginForm",
+    path: "/hospital/signin"
 
   @route "setUserName",
     path: "/setUserName"

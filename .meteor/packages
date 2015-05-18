@@ -8,6 +8,7 @@ coffeescript
 less
 accounts-base
 accounts-password
+accounts-facebook
 aldeed:autoform@5.1.2
 alanning:roles
 aldeed:collection2

@@ -35,5 +35,7 @@ Router.plugin 'ensureSignedIn', except: [
   'atSignUp'
   'atForgotPassword'
   'atSignOut'
+  'signupForm'
+  'loginForm'
 ]
 
