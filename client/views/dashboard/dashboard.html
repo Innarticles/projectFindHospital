@@ -6,7 +6,7 @@
 					{{> favoritesSidebar}}
 				</div>
 				<div class="col-md-8">
-					{{> updateHospital}}
+					{{> hospitalinfo}}
 				</div>
 			</div>
 		</div>
@@ -18,6 +18,35 @@
 <template name="updateHospital">
  {{> quickForm collection="Hospitals" doc=aHospital id="updateHospital" type="update"}}
 
+</template>
+
+
+
+<template name="hospitalinfo">
+	{{#with aHospital}}
+<div class="col-sm-12">
+	
+	<div class="col-sm-3">
+		<h3>
+			<img src="" class="img-thumbnail img-rounded">
+			</h3>
+	</div>
+	<div class="col-sm-8">
+		<div><h3>{{hospitalName}}</h3></div>
+		<div><p>{{description}}</p></div>
+		<div><hr></div>
+		<div class="col-md-6">Consultatio fee</div>
+		<div class="col-md-6">{{consultation_fee}}</div>
+		<hr>
+		<div class="col-md-12">
+			<h4>Services</h4>
+			{{#each services}}
+			<div class="col-sm-6">{{serviceName}}</div><div class="col-sm-6">{{serviceFee}}</div>
+			{{/each}}
+		</div>
+	</div>
+</div>
+	{{/with}}
 </template>
 
 

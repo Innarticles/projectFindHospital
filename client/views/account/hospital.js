@@ -41,6 +41,13 @@ Template.updateHospital.helpers({
   }
 });
 
+Template.hospitalinfo.helpers({
+  aHospital: function() {
+    var id = Meteor.userId();
+    return Hospitals.findOne({ "owner": id });
+  }
+});
+
 Template.loginForm.events({
   "submit #login-form": function(event, template) {
     event.preventDefault();
