@@ -1,55 +1,36 @@
 <template name= "maindashboard">
+	<div class="wrapper">
+		<div class="box">
+			{{> navbar}}
+			<div class="row row-offcanvas row-offcanvas-left">
+				<!-- sidebar -->
+				<div class="column col-sm-2 col-xs-1 sidebar-offcanvas" id="sidebar">
 
-	<div id="wrapper">
+					<ul class="nav">
+						<li><a href="#" data-toggle="offcanvas" class="visible-xs text-center"><i class="glyphicon glyphicon-chevron-right"></i></a></li>
+					</ul>
 
-		<!-- Navigation -->
+					<ul class="nav hidden-xs" id="lg-menu">
+						<li class="active"><a href="#featured"><i class="glyphicon glyphicon-list-alt"></i> Appointments</a></li>
+						<li><a href="#stories"><i class="glyphicon glyphicon-list"></i> Profile</a></li>
+						<li><a href="#"><i class="glyphicon glyphicon-paperclip"></i> Edit Setting</a></li>
+						<li><a href="#"><i class="glyphicon glyphicon-refresh"></i> Reviews</a></li>
+					</ul>
+					
 
-		<!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-		<div class="collapse navbar-collapse navbar-ex1-collapse">
-			<ul class="nav navbar-nav side-nav">
-				<!-- {{#with pharmacy}} -->
-				<li>
-					<!-- <a>{{name}}</a> -->
-				</li>
-				<!-- {{/with}} -->
-				<li class="active">
-					<a href="{{pathFor 'space'}}"><i class="fa fa-fw fa-dashboard"></i>Home</a>
-				</li>
-				<li>
-					<a href="{{pathFor 'drugDatabase'}}"><i class="fa fa-fw fa-bar-chart-o"></i>Drug Database</a>
-				</li>
-				<li>
-					<a href="{{pathFor 'analytics'}}"><i class="fa fa-fw fa-table"></i>Analytics</a>
-				</li>
-				<li>
-					<a href="{{pathFor 'archive'}}"><i class="fa fa-fw fa-edit"></i>Archive</a>
-				</li>
-
-        <!-- <li>
-          <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
-          <ul id="demo" class="collapse">
-            <li>
-              <a href="#">Dropdown Item</a>
-            </li>
-            <li>
-              <a href="#">Dropdown Item</a>
-            </li>
-          </ul>
-      </li> -->
-  </ul>
-</div>
-<!-- /.navbar-collapse -->
-
-<div id="page-wrapper">
-
-
-	<!-- /.container-fluid -->
-	{{>yield}}
-
-</div>
-<!-- /#page-wrapper -->
-
-</div>
-
+				</div>
+				<!-- /sidebar -->
+				<div>
+					
+					<!-- main right -->
+				</div>
+				<!-- main right col -->
+				<div class="column col-sm-10 col-xs-11" id="main">
+					<h1>This is the yield</h1>
+				</div>
+				<!-- /main -->
+			</div>
+		</div>
+	</div>
 
 </template>
