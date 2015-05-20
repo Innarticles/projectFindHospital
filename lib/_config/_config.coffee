@@ -8,8 +8,7 @@
 	title: ->
 			TAPi18n.__ 'configTitle'
 	subtitle: -> 'Find Hospitals and Clinics to you and that fits your budget.'
-	logo: ->
-		'<b>' + @name + '</b>'
+	logo: 'images/findhospitals-regular.png'
 	footer: ->
 		@name + ' - Copyright ' + new Date().getFullYear()
 

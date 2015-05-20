@@ -1,5 +1,6 @@
 /* custom template */
 html, body {
+
  height: 100%;
  font-family:verdana,arial,sans-serif;
  color:#555555;
@@ -9,6 +10,7 @@ html, body {
  font-family:Arial,sans-serif;
  font-size:13px;
 }
+
 
 a {
   color:#222222;

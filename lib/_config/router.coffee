@@ -1,7 +1,6 @@
 @subs = new SubsManager()
 
 Router.configure
-  layoutTemplate: "masterLayout"
   loadingTemplate: "loading"
   notFoundTemplate: "notFound"
   routeControllerNameConverter: "camelCase"
@@ -35,10 +34,9 @@ Router.plugin 'ensureSignedIn', except: [
   'atSignUp'
   'atForgotPassword'
   'atSignOut'
-  'new-hospital'
   'loginForm'
   'new-account'
   'appointments'
   'settings'
-  'hospitalinfo'
+  'results'
 ]
