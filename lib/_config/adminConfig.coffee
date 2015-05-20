@@ -21,7 +21,7 @@
             ]
 		}
 	dashboard:
-		homeUrl: '/dashboard'
+		homeUrl: '/hospitalinfo'
 		# widgets: [
 		# 	{
 		# 		template: 'adminCollectionWidget'

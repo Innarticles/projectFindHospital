@@ -19,7 +19,7 @@ AutoForm.hooks({
   }
 });
 
-Template.signupForm.rendered = function () {
+Template.hospitalSignUp.rendered = function () {
   console.log('down to here');
   Meteor.setTimeout(function(){
     $('#at-field-hospital').val('true');
@@ -48,29 +48,29 @@ Template.hospitalinfo.helpers({
   }
 });
 
-Template.loginForm.events({
-  "submit #login-form": function(event, template) {
-    event.preventDefault();
-    Meteor.loginWithPassword(
-      template.find("#login-username").value,
-      template.find("#login-password").value,
-      function(error) {
-        if (error) {
-          // Display the login error to the user however you want
-        }
-      }
-      );
-  }
-});
+// Template.loginForm.events({
+//   "submit #login-form": function(event, template) {
+//     event.preventDefault();
+//     Meteor.loginWithPassword(
+//       template.find("#login-username").value,
+//       template.find("#login-password").value,
+//       function(error) {
+//         if (error) {
+//           // Display the login error to the user however you want
+//         }
+//       }
+//       );
+//   }
+// });
 
-Template.logoutForm.events({
-  "submit #logout-form": function(event, template) {
-    event.preventDefault();
-    Meteor.logout(function(error) {
-      if (error) {
-        // Display the logout error to the user however you want
-      }
-    });
-  }
-});
+// Template.logoutForm.events({
+//   "submit #logout-form": function(event, template) {
+//     event.preventDefault();
+//     Meteor.logout(function(error) {
+//       if (error) {
+//         // Display the logout error to the user however you want
+//       }
+//     });
+//   }
+// });
 

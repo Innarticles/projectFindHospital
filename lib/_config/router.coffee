@@ -35,8 +35,10 @@ Router.plugin 'ensureSignedIn', except: [
   'atSignUp'
   'atForgotPassword'
   'atSignOut'
-  'signupForm'
+  'new-hospital'
   'loginForm'
-  'newAccount'
+  'new-account'
   'appointments'
+  'settings'
+  'hospitalinfo'
 ]

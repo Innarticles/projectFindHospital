@@ -23,11 +23,11 @@
                             {{#if currentUser}}
 
                             {{else}}
-                                 <li><a href="index.html#" data-toggle="modal" data-target="#signup">Sign Up</a></li>
+                            <li><a href="index.html#" data-toggle="modal" data-target="#signup">Sign Up</a></li>
                             <li><a href="index.html#" data-toggle="modal" data-target="#signin">Sign In</a></li>
-                            <li><a href="{{pathFor route='newAccount'}}" class="btn btn-green isThemeBtn">Hospital Signup</a></li>
+                            <li><a href="{{pathFor route='new-account'}}" class="btn btn-green isThemeBtn">Hospital Signup</a></li>
                             {{/if}}
-                           
+
                         </ul>
                     </div>
                 </div>
@@ -41,31 +41,44 @@
                         <div class="form-group">
                             <input type="text" class="form-control" id="city" placeholder="Type of hospital" autocomplete="off">
                         </div>
-                        <div class="form-group hidden-xs adv">
-                            <a href="index.html#" data-toggle="dropdown" class="btn btn-white dropdown-toggle">
-                                <span class="dropdown-label">Area</span> <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-select">
-                                <li class="active"><input type="radio" name="bedno" checked="checked"><a href="index.html#">Bedrooms</a></li>
-                                <li><input type="radio" name="bedno"><a href="index.html#">1</a></li>
-                                <li><input type="radio" name="bedno"><a href="index.html#">2</a></li>
-                                <li><input type="radio" name="bedno"><a href="index.html#">3</a></li>
-                                <li><input type="radio" name="bedno"><a href="index.html#">4</a></li>
-                            </ul>
+                        <div class="form-group">
+                            <input id="searchTextField" type="text" class="form-control" style="text-align: left;width:200px;direction: ltr;" >
+                        </div>
+                        <div class="form-group">
+                            <input name="latitude" id="lat"  class="form-control MapLat"  value="" type="hidden" placeholder="Latitude" style="width: 161px;" disabled>
                         </div>
 
                         <div class="form-group hidden-xs adv">
                             <div class="input-group">
                                 <div class="input-group-addon">$</div>
-                                <input class="form-control price" type="text" placeholder="From">
+                                <a href="index.html#" data-toggle="dropdown" class="btn btn-white dropdown-toggle">
+                                    <span class="dropdown-label">consultation fee</span> <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-select">
+                                    <li class="active"><input type="radio" name="bedno" checked="checked"><a href="#">0  to 20 Ghc</a></li>
+                                    <li><input type="radio" name="bedno"><a href="#">0  to 20 Ghc</a></li>
+                                    <li><input type="radio" name="bedno"><a href="#">20 to 40 Ghc</a></li>
+                                    <li><input type="radio" name="bedno"><a href="#">30 to 100 Ghc</a></li>
+                                    <li><input type="radio" name="bedno"><a href="#">100 and above</a></li>
+                                </ul>
                             </div>
                         </div>
+                        
+<!-- 
+                        <div class="form-group hidden-xs adv">
+                            <div class="input-group">
+                                <div class="input-group-addon">$</div>
+                                <input class="form-control price" type="text" placeholder="From">
+                            </div>
+                        </div> -->
                         <div class="form-group">
                             <a href="explore.html" class="btn btn-green isThemeBtn">Find Hospital</a>
                             <a href="index.html#" class="btn btn-o btn-white pull-right visible-xs" id="advanced">Advanced Search <span class="fa fa-angle-up"></span></a>
                         </div>
                     </form>
                 </div>
+<div id="map_canvas" style="height: 0;width: 0px;margin: 0.6em;"></div>
             </div>
             <div class="highlight">
                 <div class="h-title osLight">Find your new place with Reales</div>
@@ -126,240 +139,240 @@
 
 
 
-                    <!-- Content for hospitals -->
-        <div class="home-content">
-            <h2 class="osLight">Lorem Ipsum neo</h2>
-        </div>
-        <div class="hospital-lading-page pb40">
-
-        </div>
-
-        <div class="home-wrapper">
+            <!-- Content for hospitals -->
             <div class="home-content">
-                <h2 class="osLight">Recently Listed Properties</h2>
-                <div class="row pb40">
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                        <a href="single.html" class="propWidget-2">
-                            <div class="fig">
-                                <img src="images/prop/1-1.png" alt="Modern Residence in New York">
-                                <img class="blur" src="images/prop/1-1.png" alt="Modern Residence in New York">
-                                <div class="opac"></div>
-                                <div class="priceCap osLight"><span>$1,750,000</span></div>
-                                <div class="figType">FOR SALE</div>
-                                <h3 class="osLight">Modern Residence in New York</h3>
-                                <div class="address">39 Remsen St, Brooklyn, NY 11201, USA</div>
-                                <ul class="rating">
-                                    <li><span class="fa fa-star star-1"></span></li>
-                                    <li><span class="fa fa-star star-2"></span></li>
-                                    <li><span class="fa fa-star star-3"></span></li>
-                                    <li><span class="fa fa-star star-4"></span></li>
-                                    <li><span class="fa fa-star-o star-5"></span></li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                        <a href="single.html" class="propWidget-2">
-                            <div class="fig">
-                                <img src="images/prop/2-1.png" alt="Hauntingly Beautiful Estate">
-                                <img class="blur" src="images/prop/2-1.png" alt="Hauntingly Beautiful Estate">
-                                <div class="opac"></div>
-                                <div class="priceCap osLight"><span>$1,550,000</span></div>
-                                <div class="figType">FOR RENT</div>
-                                <h3 class="osLight">Hauntingly Beautiful Estate</h3>
-                                <div class="address">39 Remsen St, Brooklyn, NY 11201, USA</div>
-                                <ul class="rating">
-                                    <li><span class="fa fa-star star-1"></span></li>
-                                    <li><span class="fa fa-star star-2"></span></li>
-                                    <li><span class="fa fa-star star-3"></span></li>
-                                    <li><span class="fa fa-star star-4"></span></li>
-                                    <li><span class="fa fa-star star-5"></span></li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                        <a href="single.html" class="propWidget-2">
-                            <div class="fig">
-                                <img src="images/prop/3-1.png" alt="Luxury Mansion">
-                                <img class="blur" src="images/prop/3-1.png" alt="Luxury Mansion">
-                                <div class="opac"></div>
-                                <div class="priceCap osLight"><span>$2,350,000</span></div>
-                                <div class="figType">FOR SALE</div>
-                                <h3 class="osLight">Luxury Mansion</h3>
-                                <div class="address">39 Remsen St, Brooklyn, NY 11201, USA</div>
-                                <ul class="rating">
-                                    <li><span class="fa fa-star star-1"></span></li>
-                                    <li><span class="fa fa-star star-2"></span></li>
-                                    <li><span class="fa fa-star star-3"></span></li>
-                                    <li><span class="fa fa-star star-4"></span></li>
-                                    <li><span class="fa fa-star star-5"></span></li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+                <h2 class="osLight">Lorem Ipsum neo</h2>
+            </div>
+            <div class="hospital-lading-page pb40">
 
-                <h2 class="osLight">Hospital Listings</h2>
-                <div class="row pb40 hospital-listings">
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                        <ul>
-                            <li>3M&amp;C hospital</li>
-                            <li>3M&amp;C hospital</li>
-                            <li>3M&amp;C hospital</li>
-                            <li>3M&amp;C hospital</li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                        <ul>
-                            <li>3M&amp;C hospital</li>
-                            <li>3M&amp;C hospital</li>
-                            <li>3M&amp;C hospital</li>
-                            <li>3M&amp;C hospital</li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                        <ul>
-                            <li>3M&amp;C hospital</li>
-                            <li>3M&amp;C hospital</li>
-                            <li>3M&amp;C hospital</li>
-                            <li>3M&amp;C hospital</li>
-                        </ul>
-                    </div>
+            </div>
 
-
-                </div>
-
-                <h2 class="osLight">Developers</h2>
-                <div class="row pb40">
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                        <div class="agent">
-                            <a href="profile.html" class="agent-avatar">
-                                <img src="images/avatar-1.png" alt="John Smith">
-                                <div class="ring"></div>
+            <div class="home-wrapper">
+                <div class="home-content">
+                    <h2 class="osLight">Recently Listed Properties</h2>
+                    <div class="row pb40">
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <a href="single.html" class="propWidget-2">
+                                <div class="fig">
+                                    <img src="images/prop/1-1.png" alt="Modern Residence in New York">
+                                    <img class="blur" src="images/prop/1-1.png" alt="Modern Residence in New York">
+                                    <div class="opac"></div>
+                                    <div class="priceCap osLight"><span>$1,750,000</span></div>
+                                    <div class="figType">FOR SALE</div>
+                                    <h3 class="osLight">Modern Residence in New York</h3>
+                                    <div class="address">39 Remsen St, Brooklyn, NY 11201, USA</div>
+                                    <ul class="rating">
+                                        <li><span class="fa fa-star star-1"></span></li>
+                                        <li><span class="fa fa-star star-2"></span></li>
+                                        <li><span class="fa fa-star star-3"></span></li>
+                                        <li><span class="fa fa-star star-4"></span></li>
+                                        <li><span class="fa fa-star-o star-5"></span></li>
+                                    </ul>
+                                </div>
                             </a>
-                            <div class="agent-name osLight">Innocent Guess</div>
-                            <div class="agent-rating">
-                                <span class="fa fa-star text-yellow"></span>
-                                <span class="fa fa-star text-yellow"></span>
-                                <span class="fa fa-star text-yellow"></span>
-                                <span class="fa fa-star text-yellow"></span>
-                                <span class="fa fa-star text-yellow"></span>
-                            </div>
-                            <div class="agent-contact">
-                                <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-green"><span class="fa fa-envelope-o"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-facebook"><span class="fa fa-facebook"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-twitter"><span class="fa fa-twitter"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-google"><span class="fa fa-google-plus"></span></a>
-                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <a href="single.html" class="propWidget-2">
+                                <div class="fig">
+                                    <img src="images/prop/2-1.png" alt="Hauntingly Beautiful Estate">
+                                    <img class="blur" src="images/prop/2-1.png" alt="Hauntingly Beautiful Estate">
+                                    <div class="opac"></div>
+                                    <div class="priceCap osLight"><span>$1,550,000</span></div>
+                                    <div class="figType">FOR RENT</div>
+                                    <h3 class="osLight">Hauntingly Beautiful Estate</h3>
+                                    <div class="address">39 Remsen St, Brooklyn, NY 11201, USA</div>
+                                    <ul class="rating">
+                                        <li><span class="fa fa-star star-1"></span></li>
+                                        <li><span class="fa fa-star star-2"></span></li>
+                                        <li><span class="fa fa-star star-3"></span></li>
+                                        <li><span class="fa fa-star star-4"></span></li>
+                                        <li><span class="fa fa-star star-5"></span></li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <a href="single.html" class="propWidget-2">
+                                <div class="fig">
+                                    <img src="images/prop/3-1.png" alt="Luxury Mansion">
+                                    <img class="blur" src="images/prop/3-1.png" alt="Luxury Mansion">
+                                    <div class="opac"></div>
+                                    <div class="priceCap osLight"><span>$2,350,000</span></div>
+                                    <div class="figType">FOR SALE</div>
+                                    <h3 class="osLight">Luxury Mansion</h3>
+                                    <div class="address">39 Remsen St, Brooklyn, NY 11201, USA</div>
+                                    <ul class="rating">
+                                        <li><span class="fa fa-star star-1"></span></li>
+                                        <li><span class="fa fa-star star-2"></span></li>
+                                        <li><span class="fa fa-star star-3"></span></li>
+                                        <li><span class="fa fa-star star-4"></span></li>
+                                        <li><span class="fa fa-star star-5"></span></li>
+                                    </ul>
+                                </div>
+                            </a>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                        <div class="agent">
-                            <a href="profile.html" class="agent-avatar">
-                                <img src="images/avatar-2.png" alt="Jane Smith">
-                                <div class="ring"></div>
-                            </a>
-                            <div class="agent-name osLight">Cassandra Sarfo</div>
-                            <div class="agent-rating">
-                                <span class="fa fa-star text-yellow"></span>
-                                <span class="fa fa-star text-yellow"></span>
-                                <span class="fa fa-star text-yellow"></span>
-                                <span class="fa fa-star text-yellow"></span>
-                                <span class="fa fa-star text-yellow"></span>
-                            </div>
-                            <div class="agent-contact">
-                                <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-green"><span class="fa fa-envelope-o"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-facebook"><span class="fa fa-facebook"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-twitter"><span class="fa fa-twitter"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-google"><span class="fa fa-google-plus"></span></a>
+
+                    <h2 class="osLight">Hospital Listings</h2>
+                    <div class="row pb40 hospital-listings">
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <ul>
+                                <li>3M&amp;C hospital</li>
+                                <li>3M&amp;C hospital</li>
+                                <li>3M&amp;C hospital</li>
+                                <li>3M&amp;C hospital</li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <ul>
+                                <li>3M&amp;C hospital</li>
+                                <li>3M&amp;C hospital</li>
+                                <li>3M&amp;C hospital</li>
+                                <li>3M&amp;C hospital</li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            <ul>
+                                <li>3M&amp;C hospital</li>
+                                <li>3M&amp;C hospital</li>
+                                <li>3M&amp;C hospital</li>
+                                <li>3M&amp;C hospital</li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+
+                    <h2 class="osLight">Developers</h2>
+                    <div class="row pb40">
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="agent">
+                                <a href="profile.html" class="agent-avatar">
+                                    <img src="images/avatar-1.png" alt="John Smith">
+                                    <div class="ring"></div>
+                                </a>
+                                <div class="agent-name osLight">Innocent Guess</div>
+                                <div class="agent-rating">
+                                    <span class="fa fa-star text-yellow"></span>
+                                    <span class="fa fa-star text-yellow"></span>
+                                    <span class="fa fa-star text-yellow"></span>
+                                    <span class="fa fa-star text-yellow"></span>
+                                    <span class="fa fa-star text-yellow"></span>
+                                </div>
+                                <div class="agent-contact">
+                                    <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-green"><span class="fa fa-envelope-o"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-facebook"><span class="fa fa-facebook"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-twitter"><span class="fa fa-twitter"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-google"><span class="fa fa-google-plus"></span></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                        <div class="agent">
-                            <a href="profile.html" class="agent-avatar">
-                                <img src="images/avatar-3.png" alt="Rust Cohle">
-                                <div class="ring"></div>
-                            </a>
-                            <div class="agent-name osLight">Ikechukwu Owoh</div>
-                            <div class="agent-rating">
-                                <span class="fa fa-star text-yellow"></span>
-                                <span class="fa fa-star text-yellow"></span>
-                                <span class="fa fa-star text-yellow"></span>
-                                <span class="fa fa-star text-yellow"></span>
-                                <span class="fa fa-star text-yellow"></span>
-                            </div>
-                            <div class="agent-contact">
-                                <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-green"><span class="fa fa-envelope-o"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-facebook"><span class="fa fa-facebook"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-twitter"><span class="fa fa-twitter"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-google"><span class="fa fa-google-plus"></span></a>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="agent">
+                                <a href="profile.html" class="agent-avatar">
+                                    <img src="images/avatar-2.png" alt="Jane Smith">
+                                    <div class="ring"></div>
+                                </a>
+                                <div class="agent-name osLight">Cassandra Sarfo</div>
+                                <div class="agent-rating">
+                                    <span class="fa fa-star text-yellow"></span>
+                                    <span class="fa fa-star text-yellow"></span>
+                                    <span class="fa fa-star text-yellow"></span>
+                                    <span class="fa fa-star text-yellow"></span>
+                                    <span class="fa fa-star text-yellow"></span>
+                                </div>
+                                <div class="agent-contact">
+                                    <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-green"><span class="fa fa-envelope-o"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-facebook"><span class="fa fa-facebook"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-twitter"><span class="fa fa-twitter"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-google"><span class="fa fa-google-plus"></span></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                        <div class="agent">
-                            <a href="profile.html" class="agent-avatar">
-                                <img src="images/avatar-4.png" alt="Antony Iglesias">
-                                <div class="ring"></div>
-                            </a>
-                            <div class="agent-name osLight">Jerry King</div>
-                            <div class="agent-rating">
-                                <span class="fa fa-star text-yellow"></span>
-                                <span class="fa fa-star text-yellow"></span>
-                                <span class="fa fa-star text-yellow"></span>
-                                <span class="fa fa-star text-yellow"></span>
-                                <span class="fa fa-star text-yellow"></span>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="agent">
+                                <a href="profile.html" class="agent-avatar">
+                                    <img src="images/avatar-3.png" alt="Rust Cohle">
+                                    <div class="ring"></div>
+                                </a>
+                                <div class="agent-name osLight">Ikechukwu Owoh</div>
+                                <div class="agent-rating">
+                                    <span class="fa fa-star text-yellow"></span>
+                                    <span class="fa fa-star text-yellow"></span>
+                                    <span class="fa fa-star text-yellow"></span>
+                                    <span class="fa fa-star text-yellow"></span>
+                                    <span class="fa fa-star text-yellow"></span>
+                                </div>
+                                <div class="agent-contact">
+                                    <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-green"><span class="fa fa-envelope-o"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-facebook"><span class="fa fa-facebook"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-twitter"><span class="fa fa-twitter"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-google"><span class="fa fa-google-plus"></span></a>
+                                </div>
                             </div>
-                            <div class="agent-contact">
-                                <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-green"><span class="fa fa-envelope-o"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-facebook"><span class="fa fa-facebook"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-twitter"><span class="fa fa-twitter"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-google"><span class="fa fa-google-plus"></span></a>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <div class="agent">
+                                <a href="profile.html" class="agent-avatar">
+                                    <img src="images/avatar-4.png" alt="Antony Iglesias">
+                                    <div class="ring"></div>
+                                </a>
+                                <div class="agent-name osLight">Jerry King</div>
+                                <div class="agent-rating">
+                                    <span class="fa fa-star text-yellow"></span>
+                                    <span class="fa fa-star text-yellow"></span>
+                                    <span class="fa fa-star text-yellow"></span>
+                                    <span class="fa fa-star text-yellow"></span>
+                                    <span class="fa fa-star text-yellow"></span>
+                                </div>
+                                <div class="agent-contact">
+                                    <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-green"><span class="fa fa-envelope-o"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-facebook"><span class="fa fa-facebook"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-twitter"><span class="fa fa-twitter"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-google"><span class="fa fa-google-plus"></span></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
 
 
 
-<div class="modal fade" id="signup" role="dialog" aria-labelledby="signupLabel" aria-hidden="true">
-            <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title" id="signupLabel">Sign Up</h4>
-                    </div>
-                    <div class="modal-body">
-                        <form role="form">
-                            <div class="form-group">
-                                <div class="btn-group-justified">
-                                    <a href="explore.html" class="btn btn-lg btn-facebook"><span class="fa fa-facebook pull-left"></span>Sign Up with Facebook</a>
+            <div class="modal fade" id="signup" role="dialog" aria-labelledby="signupLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="signupLabel">Sign Up</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form role="form">
+                                <div class="form-group">
+                                    <div class="btn-group-justified">
+                                        <a href="explore.html" class="btn btn-lg btn-facebook"><span class="fa fa-facebook pull-left"></span>Sign Up with Facebook</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="btn-group-justified">
-                                    <a href="explore.html" class="btn btn-lg btn-google"><span class="fa fa-google-plus pull-left"></span>Sign Up with Google</a>
+                                <div class="form-group">
+                                    <div class="btn-group-justified">
+                                        <a href="explore.html" class="btn btn-lg btn-google"><span class="fa fa-google-plus pull-left"></span>Sign Up with Google</a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="signOr">OR</div>
-                            <div class="form-group">
-                                <input type="text" placeholder="First Name" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" placeholder="Last Name" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" placeholder="Email Address" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" placeholder="Password" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input type="password" placeholder="Confirm Password" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <div class="btn-group-justified">
-                                    <a href="explore.html" class="btn btn-lg btn-green isThemeBtn">Sign Up</a>
+                                <div class="signOr">OR</div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="First Name" class="form-control">
                                 </div>
-                            </div>
-                            <p class="help-block">Already a Reales member? <a href="index.html#" class="modal-si text-green isThemeText">Sign In</a></p>
-                        </form>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Last Name" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Email Address" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" placeholder="Password" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" placeholder="Confirm Password" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <div class="btn-group-justified">
+                                        <a href="explore.html" class="btn btn-lg btn-green isThemeBtn">Sign Up</a>
+                                    </div>
+                                </div>
+                                <p class="help-block">Already a Reales member? <a href="index.html#" class="modal-si text-green isThemeText">Sign In</a></p>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </section>
 
 
@@ -398,9 +411,9 @@
         </section> -->
 
         
-        </div>
-        {{> footerHome}}
-    </template>
+    </div>
+    {{> footerHome}}
+</template>
 
 <template name="footerHome">
     <!-- <footer id="footer-home">
@@ -427,58 +440,58 @@
         </div>
     </footer> -->
 
-         <div class="home-footer">
-            <div class="home-wrapper">
-                <div class="row">
-                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                        <div class="osLight footer-header">Company</div>
-                        <ul class="footer-nav pb20">
-                            <li><a href="index.html#">About</a></li>
-                            <li><a href="index.html#">Jobs</a></li>
-                            <li><a href="index.html#">Press</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="index.html#">Help</a></li>
-                            <li><a href="index.html#">Policies</a></li>
-                            <li><a href="index.html#">Terms & Privacy</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
-                        <div class="osLight footer-header">Discover</div>
-                        <ul class="footer-nav pb20">
-                            <li><a href="index.html#">Become a Member</a></li>
-                            <li><a href="index.html#">Properties List</a></li>
-                            <li><a href="index.html#">Sign In</a></li>
-                            <li><a href="index.html#">Widgets</a></li>
-                            <li><a href="index.html#">Components</a></li>
-                            <li><a href="index.html#">Tables</a></li>
-                            <li><a href="index.html#">Lists</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                        <div class="osLight footer-header">Get in Touch</div>
-                        <ul class="footer-nav pb20">
-                            <li class="footer-phone"><span class="fa fa-phone"></span> 800 234 67 89</li>
-                            <li class="footer-address osLight">
-                                <p>516 Green St</p>
-                                <p>San Francisco, CA 94133</p>
-                                <p>United States</p>
-                            </li>
-                            <li><a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-white"><span class="fa fa-facebook"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-white"><span class="fa fa-twitter"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-white"><span class="fa fa-google-plus"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-white"><span class="fa fa-linkedin"></span></a> </li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
-                        <div class="osLight footer-header">Subscribe to Our Newsletter</div>
-                        <form role="form">
-                            <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Email Address">
-                            </div>
-                            <div class="form-group">
-                                <a href="index.html#" class="btn btn-green btn-block isThemeBtn">Subscribe</a>
-                            </div>
-                        </form>
-                    </div>
+    <div class="home-footer">
+        <div class="home-wrapper">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                    <div class="osLight footer-header">Company</div>
+                    <ul class="footer-nav pb20">
+                        <li><a href="index.html#">About</a></li>
+                        <li><a href="index.html#">Jobs</a></li>
+                        <li><a href="index.html#">Press</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="index.html#">Help</a></li>
+                        <li><a href="index.html#">Policies</a></li>
+                        <li><a href="index.html#">Terms & Privacy</a></li>
+                    </ul>
                 </div>
-                <div class="copyright">Real estate web application<br> &copy; 2014</div>
+                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                    <div class="osLight footer-header">Discover</div>
+                    <ul class="footer-nav pb20">
+                        <li><a href="index.html#">Become a Member</a></li>
+                        <li><a href="index.html#">Properties List</a></li>
+                        <li><a href="index.html#">Sign In</a></li>
+                        <li><a href="index.html#">Widgets</a></li>
+                        <li><a href="index.html#">Components</a></li>
+                        <li><a href="index.html#">Tables</a></li>
+                        <li><a href="index.html#">Lists</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="osLight footer-header">Get in Touch</div>
+                    <ul class="footer-nav pb20">
+                        <li class="footer-phone"><span class="fa fa-phone"></span> 800 234 67 89</li>
+                        <li class="footer-address osLight">
+                            <p>516 Green St</p>
+                            <p>San Francisco, CA 94133</p>
+                            <p>United States</p>
+                        </li>
+                        <li><a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-white"><span class="fa fa-facebook"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-white"><span class="fa fa-twitter"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-white"><span class="fa fa-google-plus"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-white"><span class="fa fa-linkedin"></span></a> </li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                    <div class="osLight footer-header">Subscribe to Our Newsletter</div>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email Address">
+                        </div>
+                        <div class="form-group">
+                            <a href="index.html#" class="btn btn-green btn-block isThemeBtn">Subscribe</a>
+                        </div>
+                    </form>
+                </div>
             </div>
+            <div class="copyright">Real estate web application<br> &copy; 2014</div>
         </div>
+    </div>
 </template>
