@@ -1,9 +1,9 @@
 Template.home.onRendered(function () {
-  
-         var lat = 44.88623409320778,
-             lng = -87.86480712897173,
-             latlng = new google.maps.LatLng(lat, lng),
-             image = 'http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png';
+
+ var lat = 44.88623409320778,
+ lng = -87.86480712897173,
+ latlng = new google.maps.LatLng(lat, lng),
+ image = 'http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png';
 
          //zoomControl: true,
          //zoomControlOptions: google.maps.ZoomControlStyle.LARGE,
@@ -23,11 +23,11 @@ Template.home.onRendered(function () {
              }
          },
          map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions),
-             marker = new google.maps.Marker({
-                 position: latlng,
-                 map: map,
-                 icon: image
-             });
+         marker = new google.maps.Marker({
+             position: latlng,
+             map: map,
+             icon: image
+         });
 
          var input = document.getElementById('searchTextField');
          var autocomplete = new google.maps.places.Autocomplete(input, {
@@ -57,30 +57,30 @@ Template.home.onRendered(function () {
              $('.MapLat').val(event.latLng.lat());
              $('.MapLon').val(event.latLng.lng());
              infowindow.close();
-                     var geocoder = new google.maps.Geocoder();
-                     geocoder.geocode({
-                         "latLng":event.latLng
-                     }, function (results, status) {
-                         console.log(results, status);
-                         if (status == google.maps.GeocoderStatus.OK) {
-                             console.log(results);
-                             var lat = results[0].geometry.location.lat(),
-                                 lng = results[0].geometry.location.lng(),
-                                 placeName = results[0].address_components[3].long_name,
-                                 latlng = new google.maps.LatLng(lat, lng);
+             var geocoder = new google.maps.Geocoder();
+             geocoder.geocode({
+                 "latLng":event.latLng
+             }, function (results, status) {
+                 console.log(results, status);
+                 if (status == google.maps.GeocoderStatus.OK) {
+                     console.log(results);
+                     var lat = results[0].geometry.location.lat(),
+                     lng = results[0].geometry.location.lng(),
+                     placeName = results[0].address_components[3].long_name,
+                     latlng = new google.maps.LatLng(lat, lng);
 
-                             moveMarker(placeName, latlng);
-                             $("#searchTextField").val(results[0].address_components[3].long_name);
-                         }
-                     });
+                     moveMarker(placeName, latlng);
+                     $("#searchTextField").val(results[0].address_components[3].long_name);
+                 }
+             });
          });
-        
+
          function moveMarker(placeName, latlng) {
              marker.setIcon(image);
              marker.setPosition(latlng);
              infowindow.setContent(placeName);
              //infowindow.open(map, marker);
          }
-  
-});
-   
+
+     });
+
