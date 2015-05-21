@@ -45,10 +45,10 @@
                             <input id="searchTextField" type="text" class="form-control" style="text-align: left;width:200px;direction: ltr;" >
                         </div>
                         <div class="form-group">
-                            <input name="latitude" id="lat"  class="form-control MapLat"  value="" type="hidden" placeholder="Latitude" style="width: 161px;" disabled>
+                            <input name="latitude" id="lat"  class="form-control MapLat"  value="" type="text" placeholder="Latitude" style="width: 161px;" disabled>
                         </div>
 
-                        <div class="form-group hidden-xs adv">
+                        <!-- <div class="form-group hidden-xs adv">
                             <div class="input-group">
                                 <div class="input-group-addon">$</div>
                                 <a href="index.html#" data-toggle="dropdown" class="btn btn-white dropdown-toggle">
@@ -56,17 +56,28 @@
                                 </a>
 
                                 <ul class="dropdown-menu dropdown-select">
-                                    <li class="active"><input type="radio" name="bedno" checked="checked"><a href="#">0  to 20 Ghc</a></li>
+                                    <li><input type="radio" name="bedno"><a href="#">0  to 20 Ghc</a></li>
                                     <li><input type="radio" name="bedno"><a href="#">0  to 20 Ghc</a></li>
                                     <li><input type="radio" name="bedno"><a href="#">20 to 40 Ghc</a></li>
                                     <li><input type="radio" name="bedno"><a href="#">30 to 100 Ghc</a></li>
                                     <li><input type="radio" name="bedno"><a href="#">100 and above</a></li>
                                 </ul>
                             </div>
-                        </div>
-                        
-<!-- 
-                        <div class="form-group hidden-xs adv">
+                        </div> -->
+
+
+
+                        <div class="form-group" >
+                            <select class="selectpicker form-group" data-style="btn-primary" data-width="auto">
+                              <option data-icon="glyphicon glyphicon-music">0  to 20 Ghc</option>
+                              <option data-icon="glyphicon glyphicon-star">20 to 40 Ghc</option>
+                              <option data-icon="glyphicon glyphicon-heart">30 to 100 Ghc</option>
+                              <option data-icon="glyphicon glyphicon-heart">100 and above</option>
+                          </select>
+                      </div>
+
+
+                        <!-- <div class="form-group hidden-xs adv">
                             <div class="input-group">
                                 <div class="input-group-addon">$</div>
                                 <input class="form-control price" type="text" placeholder="From">
@@ -78,7 +89,7 @@
                         </div>
                     </form>
                 </div>
-<div id="map_canvas" style="height: 0;width: 0px;margin: 0.6em;"></div>
+                <div id="map_canvas" style="height: 0;width: 0px;margin: 0.6em;"></div>
             </div>
             <div class="highlight">
                 <div class="h-title osLight">Find your new place with Reales</div>
