@@ -1,8 +1,8 @@
 <template name="results">
   <div class="container">
     <div class="row">
- {{#each selectedHospitals}}
-    <div class="col-sm-3">
+     {{#each selectedHospitals}}
+     <div class="col-sm-3">
       <div class="panel panel-primary">
 
         <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>{{this.hospitalName}}</h4></div>
@@ -14,22 +14,71 @@
           <hr>
           <a href="" class="btn btn-info btn-small" >See other services </a> 
 
-          <a href="" id="myBtn" class="btn btn-primary btn-small" role="button" data-toggle="modal">Make an appointment</a>
-
+          <a href="{{pathFor 'booking' _id=this._id}}" class="btn btn-primary btn-small" role="button" data-toggle="modal">Make an appointment</a>
 
         </div> 
       </div>
     </div>
     {{/each}}
-    </div>
-
   </div>
+</div> 
+</template>
 
- 
-  </template>
+
+<template name="bookAppointment">
+  <div class="col-sm-8 col-offset-sm-2">
+   <div id="wrapper" class="" style="display: block; opacity: 1;">
+
+    <div id="content" class="mob-max">
+      <div class="rightContainer">
+        <h1>Book an appointment</h1>
+        <form role="form">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+              <div class="form-group">
+                <label>Your name</label>
+                <input type="text" class="form-control" id="nametxt">
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+              <div class="form-group">
+                <label>Price</label>
+                <div class="input-group">
+                  <div class="input-group-addon">$</div>
+                  <input class="form-control" type="text">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+              <div class="form-group">
+                <label>Email</label>
+                <input type="text" class="form-control" id="emailtxt">
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Description</label>
+            <textarea  id="bookingDescription" class="form-control" rows="4"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Address <span id="latitude" class="label label-default"></span> <span id="longitude" class="label label-default"></span></label>
+            <input class="form-control" type="text" id="address" placeholder="" autocomplete="off" value="{{selectedHospital.hospitalName}}">
+            <p class="help-block">You can drag the marker to property position</p>
+          </div>
 
 
-  <template name="bookAppointment">
-    
-  </template>
+
+          <div class="form-group">
+            <a href="" class="btn btn-green btn-lg isThemeBtn" id="book">Send your booking</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</template>
 
