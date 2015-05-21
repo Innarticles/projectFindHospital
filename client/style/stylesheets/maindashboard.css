@@ -6,6 +6,9 @@
 
  /* Global Styles */
 
+ .search-panel {
+ 	position: relative !important;
+ }
  body {
  	margin-top: 100px;
  	/*background-color: #222;*/
