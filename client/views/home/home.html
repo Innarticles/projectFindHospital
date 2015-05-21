@@ -34,19 +34,27 @@
                 <div class="home-caption">
                     <div class="home-title">Locate Private Hospitals and Book Appointments</div>
                     <div class="home-subtitle">With FindHospitals - We make your search easy</div>
-                    <a href="index.html#" class="btn btn-lg btn-black">Search Now</a>
-                </div>
-                <div class="search-panel">
-                    <form class="form-inline" role="form">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="city" placeholder="Type of hospital" autocomplete="off">
-                        </div>
-                        <div class="form-group">
-                            <input id="searchTextField" type="text" class="form-control" style="text-align: left;width:200px;direction: ltr;" >
-                        </div>
-                        <div class="form-group">
-                            <input name="latitude" id="lat"  class="form-control MapLat"  value="" type="text" placeholder="Latitude" style="width: 161px;" disabled>
-                        </div>
+                    <!-- <a href="index.html#" class="btn btn-lg btn-black">Search Now</a> -->
+                    <div class="search-panel">
+                        <form class="form-inline" role="form">
+                            <div class="form-group" placeholder="Type of hospital">
+                                <label for="select" class="col-lg-2 control-label">Range</label>
+                                <div class="col-lg-10">
+                                    <select class="form-control" id="select" >
+                                        <option>General Hospital</option>
+                                        <option>Dentistry</option>
+                                        <option>Orthopedic</option>
+                                        <option>Maternity</option>
+                                        <option>Psychiatry</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input id="searchTextField" type="text" class="form-control" style="text-align: left;width:200px;direction: ltr;" >
+                            </div>
+                            <div class="form-group">
+                                <input name="latitude" id="lat"  class="form-control MapLat"  value="" type="text" placeholder="Latitude" style="width: 161px;" disabled>
+                            </div>
 
                         <!-- <div class="form-group hidden-xs adv">
                             <div class="input-group">
@@ -67,14 +75,18 @@
 
 
 
-                        <div class="form-group" >
-                            <select class="selectpicker form-group" data-style="btn-primary" data-width="auto">
-                              <option data-icon="glyphicon glyphicon-music">0  to 20 Ghc</option>
-                              <option data-icon="glyphicon glyphicon-star">20 to 40 Ghc</option>
-                              <option data-icon="glyphicon glyphicon-heart">30 to 100 Ghc</option>
-                              <option data-icon="glyphicon glyphicon-heart">100 and above</option>
-                          </select>
-                      </div>
+                        <div class="form-group">
+                            <label for="select" class="col-lg-2 control-label">Range</label>
+                            <div class="col-lg-10">
+                                <select class="form-control" id="select">
+                                    <option>0  to 20 Ghc</option>
+                                    <option>20 to 40 Ghc</option>
+                                    <option>30 to 100 Ghc</option>
+                                    <option>100 to 150</option>
+                                    <option>150 and above</option>
+                                </select>
+                            </div>
+                        </div>
 
 
                         <!-- <div class="form-group hidden-xs adv">
@@ -84,13 +96,14 @@
                             </div>
                         </div> -->
                         <div class="form-group">
-                            <a href="explore.html" class="btn btn-green isThemeBtn">Find Hospital</a>
+                            <a href="explore.html" id="hospitalSearch" class="btn btn-green isThemeBtn">Find Hospital</a>
                             <a href="index.html#" class="btn btn-o btn-white pull-right visible-xs" id="advanced">Advanced Search <span class="fa fa-angle-up"></span></a>
                         </div>
                     </form>
                 </div>
                 <div id="map_canvas" style="height: 0;width: 0px;margin: 0.6em;"></div>
             </div>
+                </div>
             <div class="highlight">
                 <div class="h-title osLight">Find your new place with Reales</div>
                 <div class="h-text osLight">Fusce risus metus, placerat in consectetur eu, porttitor a est sed sed dolor lorem cras adipiscing</div>
