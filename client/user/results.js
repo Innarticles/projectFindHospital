@@ -1,9 +1,6 @@
-// Template.results.rendered = function () {
-//    $(document).ready(function(){
-//     $("#myBtn").click(function(){
-//         $("#myModal").modal();
-//     });
-// });
-// };
-
-
+// Template.results.events = {
+//         // "click #myBtn" : function(e,t) {
+//         // e.preventDefault();
+//         // $("#myModal").modal('show');
+//         // }
+//     };

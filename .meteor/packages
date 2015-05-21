@@ -21,7 +21,6 @@ aldeed:template-extension
 cfs:graphicsmagick
 yogiben:helpers
 iron:router
-yogiben:autoform-modals
 yogiben:pretty-email
 yogiben:autoform-file
 yogiben:autoform-map

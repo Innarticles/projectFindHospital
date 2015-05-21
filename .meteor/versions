@@ -87,7 +87,6 @@ mobile-status-bar@1.0.3
 momentjs:moment@2.9.0
 mongo@1.1.0
 mongo-livedata@1.0.8
-mpowaga:string-template@0.1.0
 mrt:googlemaps@0.1.1
 mrt:moment@2.8.1
 multiply:iron-router-progress@1.0.1
@@ -135,7 +134,6 @@ webapp-hashing@1.0.3
 yogiben:admin@1.1.1
 yogiben:autoform-file@0.2.5
 yogiben:autoform-map@0.0.4
-yogiben:autoform-modals@0.3.3
 yogiben:helpers@0.0.5
 yogiben:mixpanel@0.0.6
 yogiben:pretty-email@0.0.3
