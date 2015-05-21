@@ -1453,7 +1453,7 @@ a.btn.viewInfo {
     overflow-y: auto;
     background-color: #f3f3f3;
     width: 50%;
-    height: 100px;
+    height: auto;
     border-top: 1px solid #e8e8e8;
     float: right;
     -webkit-overflow-scrolling: touch;
@@ -5325,6 +5325,7 @@ blockquote {
         overflow-y: scroll;
         background-color: #f3f3f3;
         width: 0%;
+        height: auto;
         border-top: 1px solid #e8e8e8;
         float: right;
         -webkit-overflow-scrolling: touch;
@@ -5604,3 +5605,11 @@ blockquote {
         font-size: 11px;
     }
 }
+
+#wrapper {
+  left: 70px;
+  top: 60px;
+  padding-left: 0px;
+  margin: 0px 0 0 70px;
+}
+
