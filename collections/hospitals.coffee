@@ -1,6 +1,9 @@
 ServicesSchema = new SimpleSchema(
   serviceName: type: String
-  serviceFee: type: String)
+  serviceFee: type: Number)
+
+TypesSchema = new SimpleSchema(
+  typesName: type: String)
 
 @Hospitals = new Meteor.Collection('hospitals');
 Schemas.Hospital = new SimpleSchema(
@@ -16,21 +19,29 @@ Schemas.Hospital = new SimpleSchema(
 
   hospitalName:
     type: String
-    optional: true
+    optional: false
 
   description:
     type: String
-    optional: true
+    optional: false
     autoform:
       rows: 4
 
   consultation_fee:
     type: Number
-    optional: true
+    optional: false
 
   services:
     type: [ServicesSchema]
     optional: true
+
+  area:
+    type: String
+    optional: false
+  
+  types:
+    type: [TypesSchema]
+    optional: false
   
   location:
     type: String
@@ -48,10 +59,7 @@ Schemas.Hospital = new SimpleSchema(
       if this.isInsert
         Meteor.userId()
     autoform:
-      options: ->
-        _.map Meteor.users.find().fetch(), (user)->
-          label: user.emails[0].address
-          value: user._id
+      omit: true
 
   country:
     type: String
