@@ -6,6 +6,23 @@ html, body {
  color:#555555;
 }
 
+/*appointment modal*/
+ .modal-header1, .close {
+      background-color: #5cb85c;
+      color:white !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-footer {
+      background-color: #f9f9f9;
+  }
+  .btn-success {
+      width: 100%;
+      padding: 10px;
+  }
+
+/*appointment modal ends*/
+
 .nav {
  font-family:Arial,sans-serif;
  font-size:13px;

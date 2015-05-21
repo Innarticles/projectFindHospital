@@ -12,11 +12,89 @@
 
           <div class="clearfix"></div>
           <hr>
-          <a href="" class="btn btn-info btn-small" >See other services </a> <a href="" class="btn btn-primary btn-small">Make an appointment</a>
+          <a href="" class="btn btn-info btn-small" >See other services </a> 
+
+          <a href="" id="myBtn" class="btn btn-primary btn-small" role="button" data-toggle="modal">Make an appointment</a>
+
+
+
+    <a href="#myModal1" role="button" class="btn" data-toggle="modal">Launch modal</a>
         </div> 
       </div>
     </div>
     {{/each}}
   </div>
-</template>
 
+
+
+
+<!-- Modal -->
+ <div id="myModal1" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>Remember me</label>
+            </div>
+              <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <p>Not a member? <a href="#">Sign Up</a></p>
+          <p>Forgot <a href="#">Password?</a></p>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+
+
+
+
+
+
+
+
+
+
+  
+ <!-- Modal1 -->
+  
+<!--   <div id="myModal1" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+      <h3 id="myModalLabel">Edit Introduction</h3>
+    </div>
+  
+    <div class="modal-body">
+  
+      <form id="InfroText" method="POST">
+  
+      <input name="InfroText" value="1" type="hidden">
+  
+      <table>
+        <tbody><tr><td>Title</td><td><input name="title" id="title" style="width:300px" type="text"><span class="hide help-inline">This is required</span></td></tr>
+        <tr><td>Introudction</td><td><textarea name="contect" style="width:300px;height:100px"></textarea></td></tr>
+      </tbody></table>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+      <button class="btn btn-primary" data-dismiss="modal" id="InfroTextSubmit">Save changes</button>
+    </div>
+</div> -->
+  </template>
