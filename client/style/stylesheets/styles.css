@@ -519,3 +519,10 @@ a.waves-effect .waves-ripple {
   text-shadow: 0 0 2px #000000;
   padding-left: 15px;
 }
+
+.navbar {
+    position: relative;
+    min-height: 100px !important;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
