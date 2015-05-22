@@ -1,22 +1,29 @@
 <template name="results">
+     <ol class="breadcrumb">
+  <li><a href="#">Home</a></li>
+  <li class="active">Search Results</li>
+</ol>
   <div class="container">
     <div class="row">
+
      {{#each selectedHospitals}}
-     <div class="col-sm-3">
-      <div class="panel panel-primary">
+     <div class="col-sm-4">
+      <div class="card medium">
 
-        <div class="panel-heading"><a href="#" class="pull-right">View all</a> <h4>{{this.hospitalName}}</h4></div>
-
-        <div class="panel-body">
-          <p><img src="//placehold.it/150x150" class="img-circle pull-right"> <a href="#">Consultation fee: {{consultation_fee}}Ghc</a> </p> {{description}}
-
+        <div class="card-text">
+          <img src="images/hospital.png" alt="" class="img-circle">
+          <strong><span class="card-title activator">{{this.hospitalName}}</span></strong>
+          <br>
+          <hr>
+          <P>Consultation fee: <span> <strong>{{this.consultation_fee}}Ghs</strong> </span></P>
+          <P>{{this.description}}</P>
           <div class="clearfix"></div>
           <hr>
-          <a href="" class="btn btn-info btn-small" >See other services </a> 
+          <a href="" class="btn btn-default btn-xs" >See other services </a> 
 
-          <a href="{{pathFor 'booking' _id=this._id}}" class="btn btn-primary btn-small" role="button" data-toggle="modal">Make an appointment</a>
-
-        </div> 
+          <a href="{{pathFor 'booking/' _id=this._id}}" class="btn btn-primary btn-xs" role="button" data-toggle="modal">Make an appointment</a>
+        </div>
+        
       </div>
     </div>
     {{/each}}
