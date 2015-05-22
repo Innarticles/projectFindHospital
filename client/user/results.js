@@ -4,13 +4,19 @@ Template.bookAppointment.events = {
        var nameOfPatience =  $("#nametxt").val();
        var description =  $("#bookingDescription").val();
        var emailOfPatience = $("#emailtxt").val();
+       var hospital = $("#address").val();
+       var subject = nameOfPatience + "  booked for " + hospital;
 
        var emailObject = {
-            name: nameOfPatience,
+            name: subject,
             description: description,
             hisEmail: emailOfPatience
        };
        console.log("about to hit the meteor call");
       Meteor.call("sendEmail", emailObject);
+
+        Router.go('/');
     }
+
+
 };
