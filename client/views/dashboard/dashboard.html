@@ -2,7 +2,7 @@
 	<div class="template-dashboard">
 		<div class="container">
 			<div class="row" id="champion-messages">
-				<div class="col-md-3">
+				<div class="col-md-4">
 					{{> favoritesSidebar}}
 				</div>
 				<div class="col-md-8">
@@ -41,28 +41,29 @@
  <div class="well">This is your complete profile. To update/edit this, click on settings</div>
 
 
+
 	{{#with aHospital}}
-<div class="col-sm-12">
-	<div class="col-sm-3">
-		<h3>
-			<img src="" class="img-thumbnail img-rounded">
+	<div class="col-sm-12">
+		<div class="col-sm-3">
+			<h3>
+				<img src="/images/hospital.png" class="img-thumbnail img-rounded">
 			</h3>
-	</div>
-	<div class="col-sm-8">
-		<div><h3>{{hospitalName}}</h3></div>
-		<div><p>{{description}}</p></div>
-		<div><hr></div>
-		<div class="col-md-6">Consultatio fee</div>
-		<div class="col-md-6">{{consultation_fee}}</div>
-		<hr>
-		<div class="col-md-12">
-			<h4>Services</h4>
-			{{#each services}}
-			<div class="col-sm-6">{{serviceName}}</div><div class="col-sm-6">{{serviceFee}}</div>
-			{{/each}}
+		</div>
+		<div class="col-sm-8">
+			<div><h3>{{hospitalName}}</h3></div>
+			<div><p>{{description}}</p></div>
+			<div><hr></div>
+			<div class="col-md-6">Consultation fee</div>
+			<div class="col-md-6">{{consultation_fee}}</div>
+			<hr>
+			<div class="col-md-12">
+				<h4>Services</h4>
+				{{#each services}}
+				<div class="col-sm-6">{{serviceName}}</div><div class="col-sm-6">{{serviceFee}}</div>
+				{{/each}}
+			</div>
 		</div>
 	</div>
-</div>
 	{{/with}}
 </template>
 
