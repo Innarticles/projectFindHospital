@@ -9,16 +9,15 @@
  .search-panel {
  	position: relative !important;
  }
- body {
+/* body {
  	margin-top: 100px;
- 	/*background-color: #222;*/
- }
+ }*/
 
- @media(min-width:768px) {
+/* @media(min-width:768px) {
  	body {
  		margin-top: 50px;
  	}
- }
+ }*/
 
  #wrapper {
  	padding-left: 0;
@@ -37,7 +36,7 @@
 
  @media (min-width: 768px){
  	.navbar-nav {
- 		float: left !important;
+ 		/*float: left !important;*/
  		/* margin: 0px; */
  	}
  }
