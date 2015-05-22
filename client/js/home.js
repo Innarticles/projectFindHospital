@@ -14,39 +14,21 @@ Template.home.events({
 			feeRange =150
 		} else if ($("#select").val()== "150 and above"){
 			feeRange =200
-		}
-		// var hospitalType = Hospitals.find().fetch();
-		// ...
-
-		// console.log(feeRange);
-		// console.log(areaLocation);
-		// console.log(hospType);
-
-		// var result = Hospitals.find({area: areaLocation }, {
-			
-		// 	sort: Sort specifier,
-		// 	skip: Number,
-		// 	limit: Number,
-		// 	fields: Field specifier,
-		// 	reactive: Boolean,
-		// 	transform: Function
+		};
 		
-		// }).fetch();
 
-
-var searchResults = {
-	type: hospType,
-	location: areaLocation,
-	range: feeRange
-}
-
+		var searchResults = {
+			type: hospType,
+			location: areaLocation,
+			range: feeRange
+		};
 		// console.log(searchResults);
-				// db.inventory.find( { type: 'food', price: { $lt: 9.95 } } )
 
-				Router.go('results', searchResults );
-				return false;
-			}
-		});
+
+		Router.go('results', searchResults );
+		return false;
+	}
+});
 
 
 
