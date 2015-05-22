@@ -16,7 +16,6 @@ Template.home.events({
 			feeRange =200
 		};
 		
-
 		var searchResults = {
 			type: hospType,
 			location: areaLocation,
@@ -27,8 +26,17 @@ Template.home.events({
 
 		Router.go('results', searchResults );
 		return false;
+	},
+
+	'click #logout': function(e, tmpl) {
+		return Meteor.logout(function() {
+			return Session.set("ses", false);
+
+			Router.go('/');
+		});
 	}
-});
 
 
+
+	});
 

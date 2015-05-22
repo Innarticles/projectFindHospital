@@ -21,7 +21,7 @@
                     <div class="home-nav">
                         <ul>
                             {{#if currentUser}}
-
+                            <li id="logout"><a href="#">Sign Out</a></li>
                             {{else}}
                             <li><a href="{{pathFor 'atSignUp'}}">Sign Up</a></li>
                             <li><a href="{{pathFor 'atSignIn'}}">Sign In</a></li>
