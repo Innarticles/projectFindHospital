@@ -127,8 +127,8 @@ underscore@1.0.3
 underscorestring:underscore.string@3.0.3
 url@1.0.4
 user-thumbs@0.0.8
-useraccounts:bootstrap@1.10.0
-useraccounts:core@1.10.0
+useraccounts:bootstrap@1.9.1
+useraccounts:core@1.9.1
 webapp@1.2.0
 webapp-hashing@1.0.3
 yogiben:admin@1.1.1
