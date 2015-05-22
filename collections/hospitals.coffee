@@ -40,8 +40,18 @@ Schemas.Hospital = new SimpleSchema(
     optional: false
   
   types:
-    type: [TypesSchema]
+    type: String
+    allowedValues: ['General Hospital', 'Dentistry', 'Orthopedic', 'Maternity', 'Psychiatry']
     optional: false
+    autoform: {
+      options: [
+        {label: "General Hospital", value: "General Hospital"},
+        {label: "Maternity", value: "Maternity"},
+        {label: "Dentistry", value: "Dentistry"},
+        {label: "Orthopedic", value: "Orthopedic"}
+        {label: "Psychiatry", value: "Psychiatry"}
+      ]
+    }
   
   location:
     type: String
