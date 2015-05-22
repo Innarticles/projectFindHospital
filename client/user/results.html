@@ -1,33 +1,73 @@
 <template name="results">
-     <ol class="breadcrumb">
+ <ol class="breadcrumb">
   <li><a href="/">Home</a></li>
   <li class="active">Search Results</li>
 </ol>
-  <div class="container">
-    <div class="row">
 
-     {{#each selectedHospitals}}
-     <div class="col-sm-4">
-      <div class="card medium">
-
-        <div class="card-text">
-          <img src="images/hospital.png" alt="" class="img-circle">
-          <strong><span class="card-title activator">{{this.hospitalName}}</span></strong>
-          <br>
-          <hr>
-          <P>Consultation fee: <span> <strong>{{this.consultation_fee}}Ghs</strong> </span></P>
-          <P>{{this.description}}</P>
-          <div class="clearfix"></div>
-          <hr>
-          <a href="" class="btn btn-default btn-xs" >See other services </a> 
-
-          <a href="{{pathFor 'booking/' _id=this._id}}" class="btn btn-primary btn-xs" role="button" data-toggle="modal">Make an appointment</a>
-        </div>
-        
+<div class="search-panel">
+  <form class="form-inline" role="form">
+    <div class="form-group" placeholder="Type of hospital">
+      <label for="select1" class="col-lg-2 control-label">Type</label>
+      <div class="col-lg-10">
+        <select class="form-control" id="select1" >
+          <option>General Hospital</option>
+          <option>Dentistry</option>
+          <option>Orthopedic</option>
+          <option>Maternity</option>
+          <option>Psychiatry</option>
+        </select>
       </div>
     </div>
-    {{/each}}
+    <div class="form-group">
+      <input id="searchTextField" type="text" class="form-control" style="text-align: left;width:200px;direction: ltr;" >
+    </div>
+    <div class="form-group">
+      <input name="latitude" id="lat"  class="form-control MapLat"  value="" type="text" placeholder="Latitude" style="width: 161px;" disabled>
+    </div>
+
+    <div class="form-group">
+      <label for="select" class="col-lg-2 control-label">Range</label>
+      <div class="col-lg-10">
+        <select class="form-control" id="select">
+          <option>0  to 20 Ghc</option>
+          <option>20 to 40 Ghc</option>
+          <option>40 to 100 Ghc</option>
+          <option>100 to 150 Ghc</option>
+          <option>150 and above</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <a href="explore.html" id="hospitalSearch" class="btn btn-green isThemeBtn">Find Hospital</a>
+    </div>
+  </form>
+</div>
+
+<div class="container">
+  <div class="row">
+
+   {{#each selectedHospitals}}
+   <div class="col-sm-4">
+    <div class="card medium">
+
+      <div class="card-text">
+        <img src="images/hospital.png" alt="" class="img-circle">
+        <strong><span class="card-title activator">{{this.hospitalName}}</span></strong>
+        <br>
+        <hr>
+        <P>Consultation fee: <span> <strong>{{this.consultation_fee}}Ghs</strong> </span></P>
+        <P>{{this.description}}</P>
+        <div class="clearfix"></div>
+        <hr>
+        <a href="" class="btn btn-default btn-xs" >See other services </a> 
+
+        <a href="{{pathFor 'booking/' _id=this._id}}" class="btn btn-primary btn-xs" role="button" data-toggle="modal">Make an appointment</a>
+      </div>
+
+    </div>
   </div>
+  {{/each}}
+</div>
 </div> 
 </template>
 
