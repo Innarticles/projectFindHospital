@@ -55,3 +55,4 @@
 	homeRoute: '/'
 	publicRoutes: ['home']
 	dashboardRoute: '/hospitalinfo'
+	ga: 'UA-63302437-1'
