@@ -16,7 +16,6 @@ binary-heap@1.0.3
 blaze@2.1.2
 blaze-tools@1.0.3
 boilerplate-generator@1.0.3
-bootstrap@0.3.1
 callback-hook@1.0.3
 cfs:access-point@0.1.49
 cfs:base-package@0.0.30
@@ -122,6 +121,7 @@ templating@1.1.1
 timmyg:wow@1.0.1
 tracker@1.0.7
 tsega:skrollr@0.0.2
+twbs:bootstrap@3.3.4
 ui@1.0.6
 underscore@1.0.3
 underscorestring:underscore.string@3.0.3

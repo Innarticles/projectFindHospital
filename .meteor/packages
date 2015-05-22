@@ -27,7 +27,6 @@ yogiben:autoform-map
 multiply:iron-router-progress
 manuelschoebel:ms-seo
 spiderable
-bootstrap
 accounts-ui
 jparker:gravatar
 tap:i18n
@@ -53,3 +52,4 @@ yogiben:admin
 timmyg:wow
 tsega:skrollr
 email
+twbs:bootstrap
