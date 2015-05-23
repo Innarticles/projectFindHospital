@@ -2508,11 +2508,11 @@ h1.pageTitle {
     display: none;
 }
 .no-touch .propWidget-2 .fig img.blur {
-   -webkit-transition: -webkit-transform 0.35s, opacity 0.35s;
-   transition: transform 0.35s, opacity 0.35s;
-   -webkit-transform: scale(1);
-   transform: scale(1);
-   opacity: 0;
+ -webkit-transition: -webkit-transform 0.35s, opacity 0.35s;
+ transition: transform 0.35s, opacity 0.35s;
+ -webkit-transform: scale(1);
+ transform: scale(1);
+ opacity: 0;
 }
 .no-touch .propWidget-2:hover .fig > img.blur {
     -webkit-transform: scale(1.2);
@@ -4372,6 +4372,7 @@ a.home-navHandler.active {
     font-size: 25px;
     line-height: 22px;
     text-align: center;
+    color: #333;
 }
 .home-content h2.h-r {
     text-align: right;
@@ -4438,7 +4439,7 @@ h2.s-main {
 }
 h3.s-sub {
     text-align:center;
-    font-size: 13px;
+    font-size: 15px;
     color: #999;
     position: absolute;
     bottom: 20px;
@@ -4454,6 +4455,14 @@ h3.s-sub {
 }
 
 /*My css Section*/
+.label-align{
+    margin-top: 6px;
+}
+
+.select-radius{
+    border-radius: 5px;
+}
+
 .f-icon{
     margin:0px 45%; 
 }
@@ -4463,12 +4472,24 @@ h3.s-sub {
     font-size: 70px;
 }
 
+.media-style{
+    text-align: left;
+    width:200px;
+    direction: ltr;
+}
+
 .hospital-lading-page{
     height: 350px;
     width: 100% !important;
     background: url(../images/hospital-bg.jpg) no-repeat center center fixed;
     background-size: cover;
     background-position: 50% 50%;
+}
+
+.cover-blur{
+    height: 350px;
+    width:100%;
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
 .hospital-listings{
@@ -5219,6 +5240,18 @@ blockquote {
         height: 50px;
         margin-left: -40px;
     }
+
+    /*my media styling*/
+    .media-style{
+        margin-left: 15px;
+        width: 94%;
+    }
+
+    .media-btn{
+        margin-left: 15px;
+    }
+    /*end*/
+
     .logo a, .logo.expanded a {
         width: 70px;
         height: 50px;
@@ -5613,6 +5646,7 @@ blockquote {
     .featured.carousel .carousel-inner .item .carousel-caption .caption-subtitle {
         font-size: 11px;
     }
+
 }
 
 #wrapper {
