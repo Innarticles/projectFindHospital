@@ -4368,10 +4368,11 @@ a.home-navHandler.active {
 }
 .home-content h2 {
     margin: 0;
-    padding: 0 0 30px 0;
-    font-size: 22px;
+    padding: 0 0 50px 0;
+    font-size: 25px;
     line-height: 22px;
     text-align: center;
+    color: #333;
 }
 .home-content h2.h-r {
     text-align: right;
@@ -4438,7 +4439,7 @@ h2.s-main {
 }
 h3.s-sub {
     text-align:center;
-    font-size: 13px;
+    font-size: 15px;
     color: #999;
     position: absolute;
     bottom: 20px;
@@ -4454,22 +4455,51 @@ h3.s-sub {
 }
 
 /*My css Section*/
+.label-align{
+    margin-top: 6px;
+}
+
+.select-radius{
+    border-radius: 5px;
+}
+
+.f-icon{
+    margin:0px 45%; 
+}
+
+.f-icon i{
+    color: #44909B;
+    font-size: 70px;
+}
+
+.media-style{
+    text-align: left;
+    width:200px;
+    direction: ltr;
+}
 
 .hospital-lading-page{
-    height: 400px;
+    height: 350px;
     width: 100% !important;
-    background: url(../images/41.jpg) no-repeat center center fixed;
+    background: url(../images/hospital-bg.jpg) no-repeat center center fixed;
     background-size: cover;
     background-position: 50% 50%;
 }
 
+.cover-blur{
+    height: 350px;
+    width:100%;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
 .hospital-listings{
-    font-size: 20px;
     text-align: center;
 }
 
 .hospital-listings ul li{
+    font-size: 18px;
     list-style: none;
+    color: #44909B;
 }
 /*end*/
 
@@ -5210,6 +5240,18 @@ blockquote {
         height: 50px;
         margin-left: -40px;
     }
+
+    /*my media styling*/
+    .media-style{
+        margin-left: 15px;
+        width: 94%;
+    }
+
+    .media-btn{
+        margin-left: 15px;
+    }
+    /*end*/
+
     .logo a, .logo.expanded a {
         width: 70px;
         height: 50px;
@@ -5604,6 +5646,7 @@ blockquote {
     .featured.carousel .carousel-inner .item .carousel-caption .caption-subtitle {
         font-size: 11px;
     }
+
 }
 
 #wrapper {
