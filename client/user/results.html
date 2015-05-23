@@ -48,16 +48,22 @@
   <div class="row">
 
    {{#each selectedHospitals}}
-   <div class="col-sm-4">
+   <div class="col-md-4">
     <div class="card medium">
 
       <div class="card-text">
-        <img src="/images/hospital.png" alt="" class="img-circle">
-        <strong><span class="card-title activator">{{this.hospitalName}}</span></strong>
-        <br>
+        <div class="row">
+          <br/>
+          <div class="col-md-4"> 
+            <img src="/images/hospital.png" alt="" class="img-circle">
+          </div>
+          <div class="col-md-8">
+            <strong><span class="card-title activator">{{this.hospitalName}}</span></strong>
+          </div>
+        </div>
         <hr>
-        <P>Consultation fee: <span> <strong>{{this.consultation_fee}}Ghs</strong> </span></P>
-        <P>{{this.description}}</P>
+        <p>Consultation fee: <span> <strong>{{this.consultation_fee}}Ghs</strong> </span></p>
+        <p>{{this.description}}</p>
         <div class="clearfix"></div>
         <hr>
         <a href="" class="btn btn-default btn-xs" >See other services </a> 
