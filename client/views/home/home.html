@@ -55,7 +55,7 @@
 
                             </div>
                             <div class="form-group">
-                                <input name="latitude" id="lat"  class="form-control MapLat"  value="" type="text" placeholder="Latitude" style="width: 161px;" disabled>
+                                <input name="latitude" id="lat"  class="form-control MapLat"  value="" type="hidden" placeholder="Latitude" style="width: 161px;" disabled>
                             </div>
 
                         <!-- <div class="form-group hidden-xs adv">
@@ -166,7 +166,7 @@
                                 <img src="images/listerhospital.jpg" alt="hospitals">
                                 <img class="blur" src="images/listerhospital.jpg" alt="Hospitals">
                                 <div class="opac"></div>
-                                <div class="priceCap osLight"><span>1,750,000</span></div>
+                                <div class="priceCap osLight"><span>200</span></div>
                                 <h3 class="osLight">Hospitals Listed on our platform</h3>
                             </div>
                         </a>
@@ -177,7 +177,7 @@
                                 <img src="images/medical-appointment.jpg" alt="medical appointment">
                                 <img class="blur" src="images/medical-appointment.jpg" alt="medical appointment">
                                 <div class="opac"></div>
-                                <div class="priceCap osLight"><span>1,550,000</span></div>
+                                <div class="priceCap osLight"><span>223</span></div>
                                 <h3 class="osLight">Medical Appointments</h3>
                             </div>
                         </a>
@@ -188,14 +188,14 @@
                                 <img src="images/internet-traffic.jpg" alt="website traffic">
                                 <img class="blur" src="images/internet-traffic.jpg" alt="website traffic">
                                 <div class="opac"></div>
-                                <div class="priceCap osLight"><span>2,350,000</span></div>
+                                <div class="priceCap osLight"><span>1,503</span></div>
                                 <h3 class="osLight">People visiting our platform</h3>
                             </div>
                         </a>
                     </div>
                 </div>
 
-                <h2 class="osLight">Hospital Listings</h2>
+<!--                 <h2 class="osLight">Hospital Listings</h2>
                 <div class="row pb40 hospital-listings">
                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                         <ul>
@@ -223,7 +223,7 @@
                     </div>
 
 
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -348,22 +348,22 @@
                 <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
                     <div class="osLight footer-header">Company</div>
                     <ul class="footer-nav pb20">
-                        <li><a href="index.html#">About</a></li>
-                        <li><a href="index.html#">Jobs</a></li>
-                        <li><a href="index.html#">Press</a></li>
-                        <li><a href="blog2.html">Blog</a></li>
-                        <li><a href="index.html#">Help</a></li>
-                        <li><a href="index.html#">Policies</a></li>
-                        <li><a href="index.html#">Terms & Privacy</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">Terms & Privacy</a></li>
                     </ul>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
                     <div class="osLight footer-header">Discover</div>
-                    <ul class="footer-nav pb20">
-                        <li><a href="index.html#">Become a Member</a></li>
-                        <li><a href="index.html#">Healthcare Facilities Lisitng</a></li>
-                        <li><a href="index.html#">Sign In</a></li>
-                        <li><a href="index.html#">Lists</a></li>
+                    <ul class="footer-nav pb20"><!-- 
+                        <li><a href="index.html#">Become a Member</a></li> -->
+                        <li><a href="{{pathFor route='new-account'}}">Healthcare Facilities Lisitng</a></li>
+                        <li><a href="{{pathFor 'atSignIn'}}">Sign In</a></li>
+                        <li><a href="/">Lists</a></li>
                     </ul>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
@@ -375,7 +375,12 @@
                             <p>East Legon, Accra</p>
                             <p>Ghana</p>
                         </li>
-                        <li><a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-white"><span class="fa fa-facebook"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-white"><span class="fa fa-twitter"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-white"><span class="fa fa-google-plus"></span></a> <a href="index.html#" class="btn btn-sm btn-icon btn-round btn-o btn-white"><span class="fa fa-linkedin"></span></a> </li>
+               
+                        <li>
+                            {{#each socialMedia}}
+                            <a href="{{url}}" target="_blank" class="btn btn-sm btn-icon btn-round btn-o btn-white"><span class="fa fa-{{icon}}"></span></a>
+                            {{/each}}
+                        </li>
                     </ul>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
