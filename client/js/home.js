@@ -1,8 +1,18 @@
 Template.home.events({
 	'click #hospitalSearch': function (e) {
 		e.preventDefault();
+		var areaLocation;
 		var hospType = $("#select1").val();
-		var areaLocation = $("#lat").val();
+		var areaCheck = $("#lat").val();
+		if(areaCheck == "")
+		{
+			areaLocation = "Accra Metropolis"
+		} 
+		else
+		{
+			areaLocation =  $("#lat").val();
+		}
+
 		var feeRange 
 		if( $("#select").val()== "0  to 20 Ghc"){
 			feeRange = 20
@@ -41,8 +51,17 @@ Template.home.events({
 Template.results.events({
 	'click #hospitalSearch': function (e) {
 		e.preventDefault();
+		var areaLocation;
 		var hospType = $("#select1").val();
-		var areaLocation = $("#lat").val();
+		var areaCheck = $("#lat").val();
+		if(areaCheck == "")
+		{
+			areaLocation = "Accra Metropolis"
+		} 
+		else
+		{
+			areaLocation =  $("#lat").val();
+		}
 		var feeRange 
 		if( $("#select").val()== "0  to 20 Ghc"){
 			feeRange = 20
