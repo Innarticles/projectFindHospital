@@ -4368,8 +4368,8 @@ a.home-navHandler.active {
 }
 .home-content h2 {
     margin: 0;
-    padding: 0 0 30px 0;
-    font-size: 22px;
+    padding: 0 0 50px 0;
+    font-size: 25px;
     line-height: 22px;
     text-align: center;
 }
@@ -4454,9 +4454,17 @@ h3.s-sub {
 }
 
 /*My css Section*/
+.f-icon{
+    margin:0px 45%; 
+}
+
+.f-icon i{
+    color: #44909B;
+    font-size: 70px;
+}
 
 .hospital-lading-page{
-    height: 400px;
+    height: 350px;
     width: 100% !important;
     background: url(../images/hospital-bg.jpg) no-repeat center center fixed;
     background-size: cover;
@@ -4464,12 +4472,13 @@ h3.s-sub {
 }
 
 .hospital-listings{
-    font-size: 20px;
     text-align: center;
 }
 
 .hospital-listings ul li{
+    font-size: 18px;
     list-style: none;
+    color: #44909B;
 }
 /*end*/
 
