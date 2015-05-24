@@ -1,8 +1,18 @@
 Template.home.events({
 	'click #hospitalSearch': function (e) {
 		e.preventDefault();
+		var areaLocation;
 		var hospType = $("#select1").val();
-		var areaLocation = $("#lat").val();
+		var areaCheck = $("#lat").val();
+		if(areaCheck == "")
+		{
+			areaLocation = "Accra Metropolis"
+		} 
+		else
+		{
+			areaLocation =  $("#lat").val();
+		}
+
 		var feeRange 
 		if( $("#select").val()== "0  to 20 Ghc"){
 			feeRange = 20
@@ -16,7 +26,6 @@ Template.home.events({
 			feeRange =200
 		};
 		
-
 		var searchResults = {
 			type: hospType,
 			location: areaLocation,
@@ -27,16 +36,32 @@ Template.home.events({
 
 		Router.go('results', searchResults );
 		return false;
+	},
+
+	'click #logout': function(e, tmpl) {
+		return Meteor.logout(function() {
+			return Session.set("ses", false);
+
+			Router.go('/');
+		});
 	}
+
 });
-
-
 
 Template.results.events({
 	'click #hospitalSearch': function (e) {
 		e.preventDefault();
+		var areaLocation;
 		var hospType = $("#select1").val();
-		var areaLocation = $("#lat").val();
+		var areaCheck = $("#lat").val();
+		if(areaCheck == "")
+		{
+			areaLocation = "Accra Metropolis"
+		} 
+		else
+		{
+			areaLocation =  $("#lat").val();
+		}
 		var feeRange 
 		if( $("#select").val()== "0  to 20 Ghc"){
 			feeRange = 20
@@ -63,8 +88,5 @@ Template.results.events({
 		return false;
 	}
 });
-
-
-
 
 

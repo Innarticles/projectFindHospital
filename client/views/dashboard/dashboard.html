@@ -34,17 +34,18 @@
 
 
 <template name="hospitalinfo">
-	<ol class="breadcrumb">
-		<li><a href="#">Home</a></li>
-		<li class="active">Search Results</li>
-	</ol>
-	<div class="well">This is your complete profile. To update/edit this, click on settings</div>
+	  <ol class="breadcrumb">
+  <li><a href="/">Home</a></li>
+  <li class="active">Search Results</li>
+</ol>
+ <div class="well">This is your complete profile. To update/edit this, click on <strong><a href="{{pathFor 'settings'}}">Edit settings</a></strong> </div>
+
 
 
 	{{#with aHospital}}
 	<div class="col-sm-12">
 		<div class="col-sm-3">
-			<h3>
+			<h3 class="default-logo">
 				<img src="/images/hospital.png" class="img-thumbnail img-rounded">
 			</h3>
 		</div>
@@ -52,7 +53,7 @@
 			<div><h3>{{hospitalName}}</h3></div>
 			<div><p>{{description}}</p></div>
 			<div><hr></div>
-			<div class="col-md-6">Consultation fee</div>
+			<div class="col-md-6">Consultation fees</div>
 			<div class="col-md-6">{{consultation_fee}}</div>
 			<hr>
 			<div class="col-md-12">
