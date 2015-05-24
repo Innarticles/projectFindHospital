@@ -20,3 +20,8 @@ Template.bookAppointment.events = {
 
 
 };
+
+
+
+
+
