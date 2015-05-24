@@ -63,7 +63,7 @@
         </div>
         <hr>
         <p>Consultation fee: <span> <strong>{{this.consultation_fee}}Ghs</strong> </span></p>
-     <!--    <div class="dot descript">{{this.description}}</div> -->
+        <!--    <div class="dot descript">{{this.description}}</div> -->
         
         <div class="clearfix"></div>
         <hr>
@@ -80,17 +80,19 @@
 </div>
 </div> 
 
-  {{> footerHome}}
+{{> footerHome}}
 </template>
 
 <template name="noResults">
   <div class="container">
+    <!-- <img src="/frown.gif" alt=""> -->
+   <div class="row">
     <div class="col-sm-8 col-sm-offset-2">
-      <div align="center"><h1>Opps...No hospital matches your search. Please, modify your search and try again</h1> </div>
+      <div align="center"><h3>Opps...No hospital matches your search. Please, modify your search and try again</h3> </div>
     </div>
-    <div class="row">
-    </div>
+
   </div>
+</div>
 
 
 </template>
@@ -136,7 +138,7 @@
           <div class="form-group">
             <!-- <label>Address <span id="latitude" class="label label-default"></span> <span id="longitude" class="label label-default"></span></label> -->
             <input class="form-control" type="hidden" id="address" placeholder="" autocomplete="off" value="{{selectedHospital.hospitalName}}">
-           <!--  <p class="help-block">You can drag the marker to hospital position</p> -->
+            <!--  <p class="help-block">You can drag the marker to hospital position</p> -->
           </div>
 
 

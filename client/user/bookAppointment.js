@@ -16,7 +16,8 @@ Template.bookAppointment.events = {
       Meteor.call("sendEmail", emailObject);
 
         Router.go('/');
-          return sAlert.success('Request has been sent');
+       swal({   title: "Your request has been sent!",   text: "We will send you a confirmation mail",  type: "success",  timer: 4000,   showConfirmButton: false });
+          // return sAlert.success('Request has been sent');
     }
 
 
