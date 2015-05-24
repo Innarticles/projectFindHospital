@@ -16,6 +16,7 @@ Template.bookAppointment.events = {
       Meteor.call("sendEmail", emailObject);
 
         Router.go('/');
+          return sAlert.success('Request has been sent');
     }
 
 
