@@ -41,4 +41,5 @@ Router.plugin 'ensureSignedIn', except: [
   'settings'
   'results'
   'booking'
+  'terms'
 ]

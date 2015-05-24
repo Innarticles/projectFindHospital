@@ -48,16 +48,23 @@
   <div class="row">
 
    {{#each selectedHospitals}}
-   <div class="col-sm-4">
+   <div class="col-md-4">
     <div class="card medium">
 
       <div class="card-text">
-        <img src="/images/hospital.png" alt="" class="img-circle">
-        <strong><span class="card-title activator">{{this.hospitalName}}</span></strong>
-        <br>
+        <div class="row">
+          <br/>
+          <div class="col-md-4"> 
+            <img src="/images/hospital.png" alt="" class="img-circle">
+          </div>
+          <div class="col-md-8">
+            <strong><span class="card-title activator">{{this.hospitalName}}</span></strong>
+          </div>
+        </div>
         <hr>
-        <P>Consultation fee: <span> <strong>{{this.consultation_fee}}Ghs</strong> </span></P>
-        <P>{{this.description}}</P>
+        <p>Consultation fee: <span> <strong>{{this.consultation_fee}}Ghs</strong> </span></p>
+        <!--    <div class="dot descript">{{this.description}}</div> -->
+        
         <div class="clearfix"></div>
         <hr>
         <a href="" class="btn btn-default btn-xs" >See other services </a> 
@@ -72,24 +79,30 @@
   {{/each}}
 </div>
 </div> 
+
+{{> footerHome}}
 </template>
 
 <template name="noResults">
   <div class="container">
+    <!-- <img src="/frown.gif" alt=""> -->
+   <div class="row">
     <div class="col-sm-8 col-sm-offset-2">
-      <div align="center"><h1>Opps...No hospital matches your search. Please, modify your search and try again</h1> </div>
+      <div align="center"><h3>Opps...No hospital matches your search. Please, modify your search and try again</h3> </div>
     </div>
-    <div class="row">
-    </div>
+
   </div>
+</div>
+
+
 </template>
 
 
 <template name="bookAppointment">
-  <div class="col-sm-8 col-offset-sm-2">
+  <div class="col-sm-8 col-offset-sm-3">
    <div id="wrapper" class="" style="display: block; opacity: 1;">
 
-    <div id="content" class="mob-max">
+    <div id="booking" class="mob-max">
       <div class="rightContainer">
         <h1>Book an appointment</h1>
         <form role="form">
@@ -102,9 +115,9 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
               <div class="form-group">
-                <label>Price</label>
+                <label>Phone Number</label>
                 <div class="input-group">
-                  <div class="input-group-addon">$</div>
+                  <div class="input-group-addon"></div>
                   <input class="form-control" type="text">
                 </div>
               </div>
@@ -119,13 +132,13 @@
             </div>
           </div>
           <div class="form-group">
-            <label>Description</label>
+            <label>Describe your condition</label>
             <textarea  id="bookingDescription" class="form-control" rows="4"></textarea>
           </div>
           <div class="form-group">
             <!-- <label>Address <span id="latitude" class="label label-default"></span> <span id="longitude" class="label label-default"></span></label> -->
             <input class="form-control" type="hidden" id="address" placeholder="" autocomplete="off" value="{{selectedHospital.hospitalName}}">
-            <p class="help-block">You can drag the marker to hospital position</p>
+            <!--  <p class="help-block">You can drag the marker to hospital position</p> -->
           </div>
 
 

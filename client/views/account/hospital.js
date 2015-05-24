@@ -2,6 +2,16 @@ AutoForm.hooks({
   insertHospitalForm: {
     onSuccess: function(operation, result, template) {
        Router.go('dashboard');
+      return sAlert.success('Profile Created');
+
+    },
+    onError: function(operation, error, template) {
+      return sAlert.error(error);
+    }
+  },
+  updateHospital: {
+    onSuccess: function(operation, result, template) {
+       Router.go('hospitalinfo');
       return sAlert.success('Profile updated');
 
     },
