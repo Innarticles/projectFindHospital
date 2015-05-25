@@ -1,12 +1,3 @@
-arrayOfAreas = ["Accra", "Kumasi"]
-
-me = ->
-  arrayOfAreas.map (c) ->
-    {
-      label: c.name
-      value: c._id
-    }
-
 ServicesSchema = new SimpleSchema(
   serviceName: type: String
   serviceFee: type: Number)
@@ -47,8 +38,7 @@ Schemas.Hospital = new SimpleSchema(
   area:
     type: String
     optional: false
-    autoform:
-      options: me
+    
   
   types:
     type: String
@@ -299,7 +289,3 @@ Schemas.Hospital = new SimpleSchema(
 
 
 Hospitals.attachSchema Schemas.Hospital
-
-ServicesSchema = new SimpleSchema(
-  serviceName: type: String
-  serviceFee: type: String)
