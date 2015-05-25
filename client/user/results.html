@@ -61,15 +61,25 @@
             <strong><span class="card-title activator">{{this.hospitalName}}</span></strong>
           </div>
         </div>
-        <hr>
+         <hr>
+        <div class="row">
+          <div class="col-md-12">
+           
         <p>Consultation fee: <span> <strong>{{this.consultation_fee}}Ghs</strong> </span></p>
-        <!--    <div class="dot descript">{{this.description}}</div> -->
-        
+          </div>
+        </div>
         <div class="clearfix"></div>
-        <hr>
-        <a href="" class="btn btn-default btn-xs" >See other services </a> 
-
-        <a href="{{pathFor 'booking/' _id=this._id}}" class="btn btn-primary btn-xs" role="button" data-toggle="modal">Make an appointment</a>
+         <hr>
+         <br>
+        <div class="row">
+          <div class="col-md-6">
+             <a href="{{pathFor 'hospital' _id=this._id}}" class="btn btn-default btn-xs" >See other services </a> 
+          </div> 
+           <div class="col-md-6">
+            <a href="{{pathFor 'booking/' _id=this._id}}" class="btn btn-primary btn-xs" role="button" align="center">Make an appointment</a> 
+           </div>
+        </div>
+        <!--    <div class="dot descript">{{this.description}}</div> -->
       </div>
 
     </div>
@@ -110,7 +120,7 @@
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
               <div class="form-group">
                 <label>Your name</label>
-                <input type="text" class="form-control" id="nametxt">
+                <input type="text" class="form-control" id="nametxt" value="" required>
               </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
@@ -118,7 +128,7 @@
                 <label>Phone Number</label>
                 <div class="input-group">
                   <div class="input-group-addon"></div>
-                  <input class="form-control" type="text">
+                  <input class="form-control" type="text" required id="phonetxt" value="">
                 </div>
               </div>
             </div>
@@ -127,7 +137,7 @@
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
               <div class="form-group">
                 <label>Email</label>
-                <input type="text" class="form-control" id="emailtxt">
+                <input type="text" class="form-control" id="emailtxt" required value="">
               </div>
             </div>
           </div>
