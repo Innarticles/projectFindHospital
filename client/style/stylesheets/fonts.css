@@ -1,0 +1,11 @@
+@font-face {
+	font-family: webly-sleek;
+	src: url(/fonts/weblysleekuil.ttf);
+}
+
+.webly{
+	font-family: webly-sleek
+}
+h1,h2,h3{
+	font-weight: 300 !important
+}
