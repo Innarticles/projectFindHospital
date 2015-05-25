@@ -8,7 +8,7 @@ Template.bookAppointment.events = {
        var hospital = $("#address").val();
        var subject = nameOfPatient + "  booked for " + hospital;
 
-       if(nameOfPatient === "" && emailOfPatient === ""  && phoneOfPatient === ""){
+       if(nameOfPatient === "" || emailOfPatient === ""  || phoneOfPatient === ""){
         console.log("empty");
         sAlert.error('Oops! Are you missing something?', {effect: 'genie', position: 'bottom', timeout: 2000});
       
