@@ -4,7 +4,7 @@
 @Config =
 
 	# Basic Details
-	name: 'FindHospital.co'
+	name: 'FindHospitals.co'
 	title: ->
 			TAPi18n.__ 'configTitle'
 	subtitle: -> 'Find Hospitals and Clinics to you and that fits your budget.'
@@ -39,7 +39,7 @@
 
 	socialMedia:
 		facebook:
-			url: 'http://facebook.com/FindHospital.co'
+			url: 'http://facebook.com/FindHospitals.co'
 			icon: 'facebook'
 		twitter:
 			url: 'http://twitter.com/FindHospital.co'
@@ -48,7 +48,7 @@
 			url: 'http://github.com/Innarticles'
 			icon: 'github'
 		info:
-			url: 'http://meteorfactory.io'
+			url: 'http://findhospitals.meteor.com'
 			icon: 'link'
 
 	#Routes
