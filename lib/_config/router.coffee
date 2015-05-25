@@ -42,4 +42,5 @@ Router.plugin 'ensureSignedIn', except: [
   'results'
   'booking'
   'terms'
+  'hospital'
 ]
