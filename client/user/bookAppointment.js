@@ -7,6 +7,7 @@ Template.bookAppointment.events = {
        var emailOfPatient = $("#emailtxt").val();
        var hospital = $("#address").val();
        var subject = nameOfPatient + "  booked for " + hospital;
+       description = description + ". You can reach me with " + phoneOfPatient;
 
        if(nameOfPatient === "" || emailOfPatient === ""  || phoneOfPatient === ""){
         console.log("empty");
@@ -25,7 +26,7 @@ Template.bookAppointment.events = {
       Meteor.call("sendEmail", emailObject);
 
         Router.go('/');
-       swal({   title: "Your request has been sent!",   text: "We will send you a confirmation mail",  type: "success",  timer: 4000,   showConfirmButton: false });
+       swal({   title: "Your request has been sent!",   text: "You would be contacted soon",  type: "success",  timer: 4000,   showConfirmButton: false });
        }
 
           // return sAlert.success('Request has been sent');
