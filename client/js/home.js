@@ -40,8 +40,7 @@ Template.home.events({
 
 	'click #logout': function(e, tmpl) {
 		return Meteor.logout(function() {
-			return Session.set("ses", false);
-
+			sAlert.info('You logged out!.', {effect: 'genie', position: 'bottom-right', onRouteClose: true, timeout: 5000});
 			Router.go('/');
 		});
 	}
