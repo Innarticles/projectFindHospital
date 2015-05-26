@@ -30,7 +30,7 @@ AccountsTemplates.configure
   termsUrl: Config.termsUrl || null
   
   # Redirects
-  homeRoutePath: '/new-hospital' || null
+  homeRoutePath: '/' || null
   
   # Hooks
   onLogoutHook: ->
@@ -38,10 +38,19 @@ AccountsTemplates.configure
 
   onSubmitHook: ->
     console.log 'submitting form'
-    Router.go '/new-hospital/'
+    
 
 
-AccountsTemplates.configureRoute 'signUp'
+AccountsTemplates.configureRoute 'signUp', redirect: ->
+  if Meteor.user().roles[0] == 'hospital'
+    Router.go 'new-hospital'
+  else
+    Router.go '/'
+  return
+
+
+
+
 AccountsTemplates.configureRoute 'forgotPwd'
 
 AccountsTemplates.configureRoute 'signIn', redirect: ->
