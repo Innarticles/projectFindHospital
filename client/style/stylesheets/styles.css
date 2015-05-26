@@ -545,7 +545,7 @@ small.text-muted {
 
                                                                     .navbar {
                                                                       position: relative;
-                                                                      min-height: 100px !important;
+                                                                      min-height: 65px !important;
                                                                       margin-bottom: 20px;
                                                                       border: 1px solid transparent;
                                                                     }
