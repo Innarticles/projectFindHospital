@@ -5680,6 +5680,14 @@ blockquote {
         font-size: 11px;
     }
 
+    /*my media css*/
+
+    .value-prop{
+        font-size: 19px;
+        margin-top: 0px;
+
+    }
+    /*end*/
 }
 
 #wrapper {
