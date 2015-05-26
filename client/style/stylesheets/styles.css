@@ -192,7 +192,7 @@ h1,h2,h3 {
   text-shadow:0 0 1px rgba(0,0,0,.3);
 }
 .form-control {
-  
+
 }
 
 .panel textarea, .well textarea, textarea.form-control
@@ -320,10 +320,10 @@ small.text-muted {
 }
 
 .descript{
-   width: inherit;
-    height: 80px;
+ width: inherit;
+ height: 80px;
 }
-   
+
 
 
 .card-text{
