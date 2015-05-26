@@ -1,9 +1,9 @@
 var areasArray = ["Accra Metropolis","Kumasi","Tamale","Sekondi-Takoradi","Ashiaman","Sunyani","Cape Coast","Obuasi","Teshie","Tema Metropolis","Madina","Koforidua","Wa","Techiman","Ho","Nungua","Lashibi","Dome","Tema New Town","Gbawe","Oduponkpehe","Ejura","Taifa","Bawku","Aflao","Agona" ,"Swedru","Bolgatanga","Tafo","Berekum","Nkawkaw","Akim Oda","Winneba","Hohoe","Yendi","Suhum","Kintapo","Adenta East","Nsawam","Mampong","Konongo","Asamankese","Wenchi","Savelugu","Agogo","Anloga","Prestea","Effiakuma","Tarkwa","Elmina","Dunkwa-on-Offin","Begoro","Kpandu","Kintampo","Navrongo","Axim","Apam","Salaga","Saltpond","Akwatia","Shama","Keta","Nyakrom","Bibiani","Somanya","Foso","Aburi","Mumford","Bechem","Duayaw Nkwanta","Kade","Anomabu","Akropong","Kete-Krachi","Kibi","Kpandae","Mpraeso","Akim Swedru","Aboso","Bekwai"];
 
- returnAreaLabels = function () {
-    return Towns.find().map(function (c) {
-      return {label: c.name, value: c._id};
-    });
+returnAreaLabels = function () {
+  return Towns.find().map(function (c) {
+    return {label: c.name, value: c._id};
+  });
 }
 
 var ServicesSchema, TypesSchema;
@@ -48,6 +48,10 @@ Schemas.Hospital = new SimpleSchema({
       rows: 4
     }
   },
+  address: {
+    type: String,
+    optional: false
+  },
   consultation_fee: {
     type: Number,
     optional: false
@@ -61,11 +65,11 @@ Schemas.Hospital = new SimpleSchema({
     allowedValues: ["Accra Metropolis","Kumasi","Tamale","Sekondi-Takoradi","Ashiaman","Sunyani","Cape Coast","Obuasi","Teshie","Tema Metropolis","Madina","Koforidua","Wa","Techiman","Ho","Nungua","Lashibi","Dome","Tema New Town","Gbawe","Oduponkpehe","Ejura","Taifa","Bawku","Aflao","Agona" ,"Swedru","Bolgatanga","Tafo","Berekum","Nkawkaw","Akim Oda","Winneba","Hohoe","Yendi","Suhum","Kintapo","Adenta East","Nsawam","Mampong","Konongo","Asamankese","Wenchi","Savelugu","Agogo","Anloga","Prestea","Effiakuma","Tarkwa","Elmina","Dunkwa-on-Offin","Begoro","Kpandu","Kintampo","Navrongo","Axim","Apam","Salaga","Saltpond","Akwatia","Shama","Keta","Nyakrom","Bibiani","Somanya","Foso","Aburi","Mumford","Bechem","Duayaw Nkwanta","Kade","Anomabu","Akropong","Kete-Krachi","Kibi","Kpandae","Mpraeso","Akim Swedru","Aboso","Bekwai"],
     autoform: {
       options:  function () {
-    return Towns.find().map(function (c) {
-      return {label: c.name, value: c._id};
-    })
+        return Towns.find().map(function (c) {
+          return {label: c.name, value: c._id};
+        })
+      }
     }
-  }
   },
   types: {
     type: String,
@@ -73,22 +77,22 @@ Schemas.Hospital = new SimpleSchema({
     optional: false,
     autoform: {
       options: [
-        {
-          label: "General Hospital",
-          value: "General Hospital"
-        }, {
-          label: "Maternity",
-          value: "Maternity"
-        }, {
-          label: "Dentistry",
-          value: "Dentistry"
-        }, {
-          label: "Orthopedic",
-          value: "Orthopedic"
-        }, {
-          label: "Psychiatry",
-          value: "Psychiatry"
-        }
+      {
+        label: "General Hospital",
+        value: "General Hospital"
+      }, {
+        label: "Maternity",
+        value: "Maternity"
+      }, {
+        label: "Dentistry",
+        value: "Dentistry"
+      }, {
+        label: "Orthopedic",
+        value: "Orthopedic"
+      }, {
+        label: "Psychiatry",
+        value: "Psychiatry"
+      }
       ]
     }
   },
