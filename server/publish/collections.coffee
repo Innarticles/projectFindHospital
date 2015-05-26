@@ -4,6 +4,9 @@
 Meteor.publish 'posts', ->
 	Posts.find()
 
+Meteor.publish 'towns', ->
+    Towns.find()
+
 Meteor.publish 'hospitals', ->
     Hospitals.find()
 

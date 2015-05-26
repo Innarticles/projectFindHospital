@@ -22,6 +22,13 @@ Hospitals.allow
 	remove: (userId, doc) ->
 		userId == doc.owner
 
+Towns.allow
+	insert:  (userId, doc) ->
+		true
+	update: (userId, doc) ->
+		true
+	remove: (userId, doc) ->
+		true
 
 Attachments.allow
 	insert: (userId, doc) ->

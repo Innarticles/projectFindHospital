@@ -89,3 +89,14 @@ Template.results.events({
 });
 
 
+
+Template.home.helpers({
+  nba: function() {
+    return Towns.find().fetch().map(function(it){ return it.name; });
+  }
+});
+
+
+Template.home.rendered = function() {
+  Meteor.typeahead.inject();
+};
