@@ -1,25 +1,4 @@
 Template.results.onRendered(function () {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  var lat = 44.88623409320778,
  lng = -87.86480712897173,
  latlng = new google.maps.LatLng(lat, lng),

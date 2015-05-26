@@ -58,29 +58,13 @@ Template.hospitalinfo.helpers({
   }
 });
 
-// Template.loginForm.events({
-//   "submit #login-form": function(event, template) {
-//     event.preventDefault();
-//     Meteor.loginWithPassword(
-//       template.find("#login-username").value,
-//       template.find("#login-password").value,
-//       function(error) {
-//         if (error) {
-//           // Display the login error to the user however you want
-//         }
-//       }
-//       );
-//   }
-// });
 
-// Template.logoutForm.events({
-//   "submit #logout-form": function(event, template) {
-//     event.preventDefault();
-//     Meteor.logout(function(error) {
-//       if (error) {
-//         // Display the logout error to the user however you want
-//       }
-//     });
-//   }
-// });
+Template.results.rendered = function() {
+  Meteor.typeahead.inject();
+};
 
+Template.results.helpers({
+  nba: function() {
+    return Towns.find().fetch().map(function(it){ return it.name; });
+  }
+});
