@@ -2508,11 +2508,11 @@ h1.pageTitle {
     display: none;
 }
 .no-touch .propWidget-2 .fig img.blur {
-   -webkit-transition: -webkit-transform 0.35s, opacity 0.35s;
-   transition: transform 0.35s, opacity 0.35s;
-   -webkit-transform: scale(1);
-   transform: scale(1);
-   opacity: 0;
+ -webkit-transition: -webkit-transform 0.35s, opacity 0.35s;
+ transition: transform 0.35s, opacity 0.35s;
+ -webkit-transform: scale(1);
+ transform: scale(1);
+ opacity: 0;
 }
 .no-touch .propWidget-2:hover .fig > img.blur {
     -webkit-transform: scale(1.2);
@@ -5682,7 +5682,7 @@ blockquote {
 
     /*my media css*/
 
-    .value-prop{
+    .valueprop{
         font-size: 19px;
         margin-top: 0px;
 

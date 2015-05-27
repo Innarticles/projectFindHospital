@@ -9,3 +9,7 @@
 h1,h2,h3{
 	font-weight: 300 !important
 }
+.noresultStlye{
+	padding-top: 30px;
+	padding-bottom: 300px !important;
+}
