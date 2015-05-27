@@ -43,8 +43,13 @@ Template.home.events({
 			sAlert.info('You logged out!.', {effect: 'genie', position: 'bottom-right', onRouteClose: true, timeout: 5000});
 			Router.go('/');
 		});
-	}
+	},
 
+	'click .home-navHandler': function(e, tmpl) {
+		 console.log("clicked nav");
+        $('.home-nav').toggleClass('active');
+        $(this).toggleClass('active');
+	}
 });
 
 Template.results.events({
