@@ -66,7 +66,7 @@ Schemas.Hospital = new SimpleSchema({
     autoform: {
       options:  function () {
         return Towns.find().map(function (c) {
-          return {label: c.name, value: c._id};
+          return {label: c.name, value: c.name};
         })
       }
     }

@@ -2,7 +2,7 @@ AutoForm.hooks({
   insertHospitalForm: {
     onSuccess: function(operation, result, template) {
        Router.go('dashboard');
-      return sAlert.success('Profile Created');
+      return sAlert.success('Profile Created', {timeout: '20000', onRouteClose: false,  position: 'top-left'});
 
     },
     onError: function(operation, error, template) {
@@ -12,7 +12,7 @@ AutoForm.hooks({
   updateHospital: {
     onSuccess: function(operation, result, template) {
        Router.go('hospitalinfo');
-      return sAlert.success('Profile updated');
+      return sAlert.success('Profile updated', {timeout: '20000', onRouteClose: false, position: 'top-left'});
 
     },
     onError: function(operation, error, template) {
@@ -68,3 +68,10 @@ Template.results.helpers({
     return Towns.find().fetch().map(function(it){ return it.name; });
   }
 });
+
+Template.bookAppointment.helpers({
+  email: function() {
+    return Meteor.user().emails[0].address;
+  }
+});
+
