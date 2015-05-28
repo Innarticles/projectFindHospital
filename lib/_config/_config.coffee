@@ -25,8 +25,8 @@
 	dateFormat: 'D/M/YYYY'
 
 	# Meta / Extenrnal content
-	privacyUrl: 'http://meteorfactory.io'
-	termsUrl: 'http://meteorfactory.io'
+	privacyUrl: 'http://findhospitals.meteor.com/terms'
+	termsUrl: 'http://findhospitals.meteor.com/terms'
 
 	# For email footers
 	legal:
@@ -34,8 +34,8 @@
 		name: 'Meteor Factory'
 		url: 'http://benjaminpeterjones.com'
 
-	about: 'http://meteorfactory.io'
-	blog: 'http://learn.meteorfactory.io'
+	about: 'http://findhospitals.meteor.com/about'
+	blog: 'http://findhospitals.meteor.com/blog-post'
 
 	socialMedia:
 		facebook:

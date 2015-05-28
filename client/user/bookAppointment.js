@@ -25,7 +25,7 @@ Template.bookAppointment.events = {
        console.log("about to hit the meteor call");
       Meteor.call("sendEmail", emailObject);
 
-        Router.go('/');
+        Router.go('blogPost');
        swal({   title: "Your request has been sent!",   text: "You would be contacted soon",  type: "success",  timer: 4000,   showConfirmButton: false });
        }
 
