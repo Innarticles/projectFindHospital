@@ -7,9 +7,9 @@
 <div class="search-panel">
   <form class="form-inline" role="form">
     <div class="form-group" placeholder="Type of hospital">
-      <label for="select1" class="col-lg-2 control-label">Type</label>
+      <label for="select1" class="col-lg-2 control-label label-align">Type</label>
       <div class="col-lg-10">
-        <select class="form-control" id="select1" >
+        <select class="form-control select-radius" id="select1" >
           <option>General Hospital</option>
           <option>Dentistry</option>
           <option>Orthopedic</option>
@@ -19,14 +19,14 @@
       </div>
     </div>
     <div class="form-group">
-      <input type="text" id="lat" class="form-control typeahead" placeholder="Area e.g Accra Metropolis" autocomplete="off" spellcheck="off" data-source="nba"/>
+      <input type="text" id="lat" class="form-control typeahead select-radius" placeholder="Area e.g Accra Metropolis" autocomplete="off" spellcheck="off" data-source="nba"/>
     </div>
 
 
     <div class="form-group">
-      <label for="select" class="col-lg-2 control-label">Range</label>
+      <label for="select" class="col-lg-2 control-label label-align">Range</label>
       <div class="col-lg-10">
-        <select class="form-control" id="select">
+        <select class="form-control select-radius media-style" id="select">
           <option>0  to 20 Ghc</option>
           <option>20 to 40 Ghc</option>
           <option>40 to 100 Ghc</option>
@@ -36,7 +36,7 @@
       </div>
     </div>
     <div class="form-group">
-      <a href="explore.html" id="hospitalSearch" class="btn btn-green isThemeBtn">Find Hospital</a>
+      <a href="explore.html" id="hospitalSearch" class="btn btn-green isThemeBtn select-radius media-btn">Find Hospital</a>
     </div>
   </form>
 </div>
@@ -74,10 +74,10 @@
         <hr>
         <br>
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6 col-sm-4">
            <a href="{{pathFor 'hospital' _id=this._id}}" class="btn btn-default btn-xs btn-spec" >See other services </a> 
          </div> 
-         <div class="col-md-6">
+         <div class="col-md-6 col-sm-8">
           <a href="{{pathFor 'booking/' _id=this._id}}" class="btn btn-primary btn-xs btn-spec1" role="button" align="center">Make an appointment</a> 
         </div>
       </div>
@@ -96,7 +96,7 @@
 </template>
 
 <template name="repo">
-       <p class="repo-language">{{name}}</p>
+ <p class="repo-language">{{name}}</p>
 </template>
 
 <template name="noResults">
