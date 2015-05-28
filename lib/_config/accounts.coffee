@@ -1,4 +1,18 @@
 # See https://github.com/meteor-useraccounts/core/blob/master/Guide.md
+mySubmitFunc = (error, state) ->
+  if !error
+    if state == 'signIn'
+      
+      # ...
+    else
+    if state == 'signUp'
+      
+      # ...
+    else
+  return
+
+
+
 
 AccountsTemplates.configure
   
@@ -36,8 +50,8 @@ AccountsTemplates.configure
   onLogoutHook: ->
     console.log 'logout'
 
-  onSubmitHook: ->
-    console.log 'submitting form'
+  onSubmitHook: mySubmitFunc
+    
     
 
 

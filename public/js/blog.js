@@ -16,10 +16,6 @@
         $('body').addClass('no-touch');
     }
 
-    $('.home-navHandler').click(function() {
-        $('.blog-nav').toggleClass('active');
-        $(this).toggleClass('active');
-    });
 
     //Enable swiping
     $(".carousel-inner").swipe( {
@@ -29,11 +25,6 @@
         swipeRight: function() {
             $(this).parent().carousel('prev');
         }
-    });
-
-    $('.toggle-search').click(function() {
-        $('.blog-search').toggleClass('active');
-        $(this).toggleClass('active');
     });
 
     $('.isThemeBtn').addClass("btn-" + themeColor.replace("css/app", "green"));
