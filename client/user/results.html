@@ -36,7 +36,7 @@
       </div>
     </div>
     <div class="form-group">
-      <a href="explore.html" id="hospitalSearch" class="btn btn-green isThemeBtn select-radius media-btn">Find Hospital</a>
+      <a href="explore.html" id="hospitalSearch" class="btn btn-green isThemeBtn select-radius media-btn" onClick="_gaq.push(['_trackEvent', 'Search', 'results', 'Find Hospitals results']);">Find Hospital</a>
     </div>
   </form>
 </div>
@@ -75,10 +75,10 @@
         <br>
         <div class="row">
           <div class="col-md-6 col-sm-4">
-           <a href="{{pathFor 'hospital' _id=this._id}}" class="btn btn-default btn-xs btn-spec" >See other services </a> 
+           <a href="{{pathFor 'hospital' _id=this._id}}" class="btn btn-default btn-xs btn-spec" onClick="_gaq.push(['_trackEvent', 'Appointments', 'Other Services', 'Details of hospital']);">See other services </a> 
          </div> 
          <div class="col-md-6 col-sm-8">
-          <a href="{{pathFor 'booking/' _id=this._id}}" class="btn btn-primary btn-xs btn-spec1" role="button" align="center">Make an appointment</a> 
+          <a href="{{pathFor 'booking/' _id=this._id}}" class="btn btn-primary btn-xs btn-spec1" role="button" align="center" onClick="_gaq.push(['_trackEvent', 'Appointments', 'make', 'Make Appointments']);">Make an appointment</a> 
         </div>
       </div>
       <!--    <div class="dot descript">{{this.description}}</div> -->
