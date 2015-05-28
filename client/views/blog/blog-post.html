@@ -1,0 +1,249 @@
+<template name="blogPost">
+
+    <div class="notransition no-hidden">
+        <div class="blog-search">
+            <input type="search" placeholder="Search the blog..." class="osLight">
+        </div>
+
+        <!-- Hero -->
+
+        <div id="hero-container-blog">
+            <div id="carouselBlog" class="carousel slide featured" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="item active" style="background-image: url(images/blog-1.jpg)">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <div class="carousel-title">Architecture</div>
+                                <div class="caption-title">The Psychology of Achieving Balance In Interior Design</div>
+                                <div class="p-n-articles">
+                                    <div class="p-article">
+                                        <div class="pna-title">Previous article</div>
+                                        <a href="blog-post.html#">Why Green Architecture Is The Perfect Investment for Your Home</a>
+                                    </div>
+                                    <div class="n-article">
+                                        <div class="pna-title">Next article</div>
+                                        <a href="blog-post.html#">Practical Lighting Size & Placement Guide for Every Corner of the House</a>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Header -->
+
+            <div class="home-header">
+                <div class="home-logo osLight">
+                    <span><img src="images/findhospitals-white.png"></span>
+                </div>
+                <a href="#" class="home-navHandler visible-xs"><span class="fa fa-bars"></span></a>
+                <a href="#" class="toggle-search"><span class="icon-magnifier"></span></a>
+                <div class="blog-nav">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                         {{#if currentUser}}
+                            <li id="logout"><a href="#">Sign Out</a></li>
+                            {{else}}
+                            <li><a href="{{pathFor 'atSignUp'}}">Sign Up</a></li>
+                            <li><a href="{{pathFor 'atSignIn'}}">Sign In</a></li>
+                            <li><a href="{{pathFor route='new-account'}}" class="btn btn-green isThemeBtn">Hospital Signup</a></li>
+                            {{/if}}
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+
+        <div class="home-content">
+            <div class="home-wrapper">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                        <div class="post-top">
+                            <div class="post-author">
+                                <img src="images/avatar-1.png" alt="avatar">
+                                <div class="pa-user">
+                                    <div class="pa-name">Dr. Tolu Gbenga on May 4, 2015</div>
+                                    <div class="pa-title">Guest Blogger</div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="post-share">
+                                <div class="ps-social"><a href="blog-post.html#" class="btn btn-sm btn-icon btn-round btn-o btn-facebook"><span class="fa fa-facebook"></span></a> <a href="blog-post.html#" class="btn btn-sm btn-icon btn-round btn-o btn-twitter"><span class="fa fa-twitter"></span></a> <a href="blog-post.html#" class="btn btn-sm btn-icon btn-round btn-o btn-google"><span class="fa fa-google-plus"></span></a> <a href="blog-post.html#" class="btn btn-sm btn-icon btn-round btn-o btn-blue"><span class="fa fa-linkedin"></span></a></div>
+                                <div class="ps-stats">
+                                    <span>245</span> Shares&nbsp;&nbsp;&nbsp;
+                                    <span>4</span> Comments
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="post-content">
+                            <h2 class="osLight">There are many variations of passages of Lorem Ipsum available</h2>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                            <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                            <blockquote>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis</blockquote>
+                            <div class="image-block">
+                                <img src="images/blog-3.jpg" alt="blog image">
+                                <div class="ib-title"><span class="osLight">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit</span></div>
+                            </div>
+                            <h2 class="osLight">The standard chunk of Lorem Ipsum used</h2>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                            <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+                        </div>
+<!--                         <div class="f-pn-articles">
+                            <a href="blog-post.html#" class="f-p-article">
+                                <div class="fpna-title">Previous article</div>
+                                <span class="fpna-header">Why Green Architecture Is The Perfect Investment for Your Home</span>
+                                <span class="fa fa-angle-left pull-left pn-icon"></span>
+                            </a>
+                            <a href="blog-post.html#" class="f-n-article">
+                                <div class="fpna-title">Next article</div>
+                                <span class="fpna-header">Practical Lighting Size & Placement Guide for Every Corner of the House</span>
+                                <span class="fa fa-angle-right pull-right pn-icon"></span>
+                            </a>
+                            <div class="clearfix"></div>
+                        </div>
+                        <h2 class="osLight align-left">Related Articles</h2>
+                        <div class="row pb20">
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <div class="article bg-w">
+                                    <a href="blog-post.html" class="image"><img src="images/post-5.jpg" alt="blog image"></a>
+                                    <div class="article-category"><a href="blog-post.html#" class="text-green isThemeText">Architecture</a></div>
+                                    <h3 class="osLight"><a href="blog-post.html">Stylish Modern Ranch Exuding a Welcoming Feel</a></h3>
+                                    <div class="footer"><a href="blog-post.html#">John Smith</a>, <a href="blog-post.html#">Sep 3, 2014</a></div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <div class="article bg-w">
+                                    <a href="blog-post.html" class="image"><img src="images/post-6.jpg" alt="blog image"></a>
+                                    <div class="article-category"><a href="blog-post.html#" class="text-green isThemeText">Architecture</a></div>
+                                    <h3 class="osLight"><a href="blog-post.html">Private Contemporary Home Balancing Openness</a></h3>
+                                    <div class="footer"><a href="blog-post.html#">John Smith</a>, <a href="blog-post.html#">Sep 2, 2014</a></div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <div class="article bg-w">
+                                    <a href="blog-post.html" class="image"><img src="images/post-1.jpg" alt="blog image"></a>
+                                    <div class="article-category"><a href="blog-post.html#" class="text-green isThemeText">Architecture</a></div>
+                                    <h3 class="osLight"><a href="blog-post.html">Modern Two-Level Pool House in Los Angeles</a></h3>
+                                    <div class="footer"><a href="blog-post.html#">John Smith</a>, <a href="blog-post.html#">Sep 1, 2014</a></div>
+                                </div>
+                            </div>
+                        </div> -->
+                        <h2 class="osLight align-left"><span>1</span> Comments</h2>
+                        <div class="post-comments">
+                            <div class="comment">
+                                <div class="commentAvatar">
+                                    <img class="avatar" src="images/avatar-1.png" alt="avatar">
+                                    <div class="commentArrow bg-w"><span class="fa fa-caret-left"></span></div>
+                                </div>
+                                <div class="commentContent bg-w">
+                                    <div class="commentName">Nestor</div>
+                                    <div class="commentBody">
+                                        Nice article. May be we can get more information as to regards to how this can help poor!
+                                    </div>
+                                    <div class="commentActions">
+                                        <div class="commentTime"><span class="icon-clock"></span> 4 days ago</div>
+                                        <ul>
+                                            <li><a href="blog-post.html#"><span class="icon-action-undo"></span></a></li>
+                                            <li><a href="blog-post.html#"><span class="icon-like"></span> 2</a></li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+<!--                             <div class="comment reply">
+                                <div class="commentAvatar">
+                                    <img class="avatar" src="images/avatar-1.png" alt="avatar">
+                                    <div class="commentArrow bg-w"><span class="fa fa-caret-left"></span></div>
+                                </div>
+                                <div class="commentContent bg-w">
+                                    <div class="commentName">John Smith</div>
+                                    <div class="commentBody">
+                                        Comment posted by me. I have the power to remove it.
+                                    </div>
+                                    <div class="commentActions">
+                                        <div class="commentTime"><span class="icon-clock"></span> 2 hours ago</div>
+                                        <ul>
+                                            <li><a href="blog-post.html#"><span class="fa fa-trash-o"></span></a></li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div> -->
+                        </div>
+                        <h2 class="osLight align-left">Leave a Comment</h2>
+                        <form role="form" class="pb20">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Name" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                    <div class="form-group">
+                                        <input type="text" placeholder="Email" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <div class="form-group">
+                                        <textarea placeholder="Comment" class="form-control" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <a href="blog-post.html#" class="btn btn-green isThemeBtn">Post comment</a>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-12 col-lg-12">
+                                <h2 class="osLight h-r">Categories</h2>
+                                <ul class="blog-r-nav">
+                                    <li><a href="{{pathFor 'blogPost'}}">Health (1)</a></li>
+<!--                                     <li><a href="#">Fitness (0)</a></li>
+                                    <li><a href="#">Diet (0)</a></li>
+                                    <li><a href="#">Hospitals (0)</a></li>
+                                    <li><a href="#">Travelling (56)</a></li> -->
+<!--                                     <li><a href="blog-post.html#">Living Room (28)</a></li>
+                                    <li><a href="blog-post.html#">Living Room (39)</a></li>
+                                    <li><a href="blog-post.html#">Bathroom (21)</a></li> -->
+                                </ul>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-12 col-lg-12">
+                                <h2 class="osLight h-r">Archive</h2>
+                                <ul class="blog-r-nav">
+                                    <li><a href="{{pathFor 'blogPost'}}">May 2015</a></li>
+<!--                                     <li><a href="blog-post.html#">September 2014</a></li>
+                                    <li><a href="blog-post.html#">August 2014</a></li>
+                                    <li><a href="blog-post.html#">July 2014</a></li>
+                                    <li><a href="blog-post.html#">June 2014</a></li>
+                                    <li><a href="blog-post.html#">May 2014</a></li>
+                                    <li><a href="blog-post.html#">April 2014</a></li>
+                                    <li><a href="blog-post.html#">March 2014</a></li>
+                                    <li><a href="blog-post.html#">February 2014</a></li>
+                                    <li><a href="blog-post.html#">January 2014</a></li> -->
+                                </ul>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <h2 class="osLight h-r">Popular Tags</h2>
+                                <div class="blog-tags">
+                                    <a href="{{pathFor 'blogPost'}}" class="label label-default">health</a><a href="{{pathFor 'blogPost'}}" class="label label-default">diet</a><!-- <a href="blog-post.html#" class="label label-default">chair</a><a href="blog-post.html#" class="label label-default">modern</a><a href="blog-post.html#" class="label label-default">bathroom</a><a href="blog-post.html#" class="label label-default">table</a><a href="blog-post.html#" class="label label-default">sofa</a><a href="blog-post.html#" class="label label-default">bed</a><a href="blog-post.html#" class="label label-default">design</a><a href="blog-post.html#" class="label label-default">apartment</a><a href="blog-post.html#" class="label label-default">leather</a><a href="blog-post.html#" class="label label-default">lamp</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+       {{> footerHome}}
+    </div>
+</template>
