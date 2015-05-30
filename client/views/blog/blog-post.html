@@ -15,7 +15,7 @@
                             <div class="carousel-caption">
                                 <div class="carousel-title">Architecture</div>
                                 <div class="caption-title">The Psychology of Achieving Balance In Interior Design</div>
-                                <div class="p-n-articles">
+                                <!-- <div class="p-n-articles">
                                     <div class="p-article">
                                         <div class="pna-title">Previous article</div>
                                         <a href="blog-post.html#">Why Green Architecture Is The Perfect Investment for Your Home</a>
@@ -26,7 +26,7 @@
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -43,13 +43,13 @@
                 <div class="blog-nav">
                     <ul>
                         <li><a href="/">Home</a></li>
-                         {{#if currentUser}}
-                            <li id="logout"><a href="#">Sign Out</a></li>
-                            {{else}}
-                            <li><a href="{{pathFor 'atSignUp'}}">Sign Up</a></li>
-                            <li><a href="{{pathFor 'atSignIn'}}">Sign In</a></li>
-                            <li><a href="{{pathFor route='new-account'}}" class="btn btn-green isThemeBtn">Hospital Signup</a></li>
-                            {{/if}}
+                        {{#if currentUser}}
+                        <li id="logout"><a href="#">Sign Out</a></li>
+                        {{else}}
+                        <li><a href="{{pathFor 'atSignUp'}}">Sign Up</a></li>
+                        <li><a href="{{pathFor 'atSignIn'}}">Sign In</a></li>
+                        <li><a href="{{pathFor route='new-account'}}" class="btn btn-green isThemeBtn">Hospital Signup</a></li>
+                        {{/if}}
 
                     </ul>
                 </div>
@@ -243,7 +243,9 @@
             </div>
         </div>
 
-        <!-- Footer -->
-       {{> footerHome}}
-    </div>
+   <!-- Footer -->
+    {{> footerHome}}
+    
+     </div>
+</div>
 </template>

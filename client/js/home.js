@@ -31,8 +31,8 @@ Template.home.events({
 			location: areaLocation,
 			range: feeRange
 		};
-		// console.log(searchResults);
-
+		//Send a google analytic event to track this milestone
+		ga('send', 'event', 'Search', 'find click', 'Find Hospitals');
 
 		Router.go('results', searchResults );
 		return false;
@@ -46,9 +46,9 @@ Template.home.events({
 	},
 
 	'click .home-navHandler': function(e, tmpl) {
-		 console.log("clicked nav");
-        $('.home-nav').toggleClass('active');
-        $(this).toggleClass('active');
+		console.log("clicked nav");
+		$('.home-nav').toggleClass('active');
+		$(this).toggleClass('active');
 	}
 });
 
@@ -86,8 +86,8 @@ Template.results.events({
 			range: feeRange
 		};
 		// console.log(searchResults);
-
-
+		//track
+		ga('send', 'event', 'Search in results', 'find click', 'Find Hospitals');
 		Router.go('results', searchResults );
 		return false;
 	}
@@ -96,12 +96,12 @@ Template.results.events({
 
 
 Template.home.helpers({
-  nba: function() {
-    return Towns.find().fetch().map(function(it){ return it.name; });
-  }
+	nba: function() {
+		return Towns.find().fetch().map(function(it){ return it.name; });
+	}
 });
 
 
 Template.home.rendered = function() {
-  Meteor.typeahead.inject();
+	Meteor.typeahead.inject();
 };
