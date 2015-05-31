@@ -8,7 +8,6 @@ import url("http://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.5.4/bootstr
 
 
 
-
 html, body {
 
  height: 100%;
@@ -30,6 +29,13 @@ a:hover {
   text-decoration:none;
 }
 
+
+
+@media screen and (min-width:767px) and (max-width:1200px){
+   .mhide{
+    display: none;
+   }
+}
 hr {
   border-color:#dedede;
 }
