@@ -32,9 +32,9 @@ a:hover {
 
 
 @media screen and (min-width:767px) and (max-width:1200px){
-   .mhide{
-    display: none;
-   }
+ .mhide{
+  display: none;
+}
 }
 hr {
   border-color:#dedede;

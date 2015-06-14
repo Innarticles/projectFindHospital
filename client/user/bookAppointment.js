@@ -6,8 +6,10 @@ Template.bookAppointment.events = {
     var description =  $("#bookingDescription").val();
     var emailOfPatient = $("#emailtxt").val();
     var hospital = $("#address").val();
+    var bookDate = $("#datepicker").val();
+    var bookTime = $("#bookingTime").val();
     var subject = nameOfPatient + "  booked for " + hospital;
-    description = description + ". You can reach me with " + phoneOfPatient;
+    // description = description + ". You can reach me with " + phoneOfPatient;
 
     Session.set('patientname', nameOfPatient);
     Session.set('patientphone', phoneOfPatient);
@@ -16,6 +18,8 @@ Template.bookAppointment.events = {
     Session.set('hospitaladd', hospital);
     Session.set('subject', subject);
     Session.set('description', description);
+    Session.set('bookingDate', bookDate);
+    Session.set('bookingTime', bookTime);
 
     console.log(nameOfPatient);
 

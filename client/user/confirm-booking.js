@@ -6,7 +6,10 @@ Template.confirmBooking.helpers({
 	patientphone: function() { return Session.get('patientphone'); },
 	patientcondition: function() { return Session.get('patientcondition'); },
 	patientEmail: function() { return Session.get('patientEmail'); },
-	hospitaladd: function() { return Session.get('hospitaladd'); }
+	hospitaladd: function() { return Session.get('hospitaladd'); },
+	bookingDate: function() { return Session.get('bookingDate'); },
+	bookingTime: function() { return Session.get('bookingTime'); }
+
 
 
 });
