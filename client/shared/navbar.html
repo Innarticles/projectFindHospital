@@ -1,6 +1,6 @@
 <template name="navbar">
 	<div class="template-navbar">
-		<div class="navbar">
+		<nav class="navbar navbar-fixed-top">
 			<div class="container close-navbar">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle">
@@ -9,11 +9,11 @@
 <!-- 					<a href="{{pathFor 'profile'}}" class="xs-mobile-cta">
 						<i class="fa fa-user"></i>
 					</a> -->
-					<a class="navbar-brand" href="{{#if User}}{{Config.dashboardRoute}}{{else}}{{Config.homeRoute}}{{/if}}"> <img src="{{Config.logo}}" alt=""></a>
+					<a class="navbar-brand" href="{{#if User}}{{Config.dashboardRoute}}{{else}}{{Config.homeRoute}}{{/if}}"> <img src="{{Config.logo}}" alt="findhospital-logo" class="img-logo"></a>
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav navbar-right">
-					{{#if User}}
+						{{#if User}}
 						{{> notificationsDropdown}}
 						{{#if isInRole 'admin'}}
 						<li><a href="{{pathFor 'adminDashboard'}}">{{_ "admin"}}</a></li> 
@@ -33,17 +33,17 @@
 						<li class="visible-xs">
 							<a class="close-navbar" href="/sign-out">{{_ "signout"}}</a>
 						</li>
-					{{else}}
+						{{else}}
 						<li>
 							<a class="close-navbar" href="/sign-up">{{_ "signup"}}</a>
 						</li>
 						<li>
 							<a class="close-navbar" href="/sign-in">{{_ "login"}}</a>
 						</li>
-					{{/if}}
+						{{/if}}
 					</ul>
 				</div>
 			</div>
-		</div>
+		</nav>
 	</div>
 </template>

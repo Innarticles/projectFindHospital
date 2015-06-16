@@ -11,34 +11,49 @@
  }
 /* body {
  	margin-top: 100px;
- }*/
+   }*/
 
 /* @media(min-width:768px) {
  	body {
  		margin-top: 50px;
  	}
- }*/
+   }*/
 
- #wrapper {
- 	padding-left: 0;
- }
 
- #page-wrapper {
- 	width: 100%;
- 	padding: 0;
- 	background-color: #fff;
- }
+   /*cassandra css*/
 
- .huge {
- 	font-size: 50px;
- 	line-height: normal;
- }
+   .navbar-brand .img-logo{
+    width: 60%;
+  }
 
- @media (min-width: 768px){
- 	.navbar-nav {
- 		/*float: left !important;*/
- 		/* margin: 0px; */
- 	}
+  .navbar-brand{
+    padding: 9px 0px !important;
+    margin-left: -45px !important;
+  }
+
+
+  /*end*/
+
+  #wrapper {
+    padding-left: 0;
+  }
+
+  #page-wrapper {
+    width: 100%;
+    padding: 0;
+    background-color: #fff;
+  }
+
+  .huge {
+    font-size: 50px;
+    line-height: normal;
+  }
+
+  @media (min-width: 768px){
+    .navbar-nav {
+     /*float: left !important;*/
+     /* margin: 0px; */
+   }
  }
 
  @media(min-width:768px) {

@@ -17,12 +17,12 @@ html, body {
 
 .nav {
  font-family:Arial,sans-serif;
- font-size:13px;
+ font-size:15px;
 }
 
 
 a {
-  color:#222222;
+  color:#999;
 }
 
 a:hover {
@@ -32,9 +32,9 @@ a:hover {
 
 
 @media screen and (min-width:767px) and (max-width:1200px){
-   .mhide{
-    display: none;
-   }
+ .mhide{
+  display: none;
+}
 }
 hr {
   border-color:#dedede;
@@ -87,7 +87,7 @@ hr {
  position: absolute;
  right: 0;
  top: 0;
- background-color:#444444;
+ background-color:#222;
   /*
     background-image:url('/assets/example/bg_suburb.jpg');
     background-size:cover;
@@ -122,9 +122,9 @@ hr {
 }
 
 #main {
- background-color:#e9eaed;
- padding-left:0;
- padding-right:0;
+  background-color:#fff;
+  padding-left:0;
+  padding-right:0;
 }
 #main .img-circle {
  margin-top:18px;
@@ -134,17 +134,36 @@ hr {
 
 #sidebar {
   padding:0px;
-  padding-top:15px;
+  padding-top:6px;
+}
+
+#lg-menu{
+  margin-top: -9px;
+}
+
+#lg-menu li a{
+  padding: 15px 0px;
+  margin-left: 27px;
+}
+
+#lg-menu li a>i{
+  padding-right: 5px;
 }
 
 #sidebar, #sidebar a, #sidebar-footer a {
-  color:#ffffff;
+  color:#999;
   background-color:transparent;
   text-shadow:0 0 2px #000000;
   padding-left:5px;
 }
-#sidebar .nav li>a:hover {
-  background-color:#393939;
+#sidebar .nav li:hover {
+  background-color:#080808;
+  color: #fff;
+}
+
+#sidebar .nav li .active>a{
+  background-color: #080808;
+  color: #fff;
 }
 
 .logo {
@@ -542,10 +561,10 @@ small.text-muted {
                                                                      }
 
                                                                      #sidebar, #sidebar a, #sidebar-footer a {
-                                                                      color: #ffffff;
+                                                                      color: #999;
                                                                       background-color: transparent;
                                                                       text-shadow: 0 0 2px #000000;
-                                                                      padding-left: 15px;
+                                                                      padding-left: 0px;
                                                                     }
 
                                                                     .navbar {
