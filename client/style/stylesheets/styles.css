@@ -87,7 +87,6 @@ hr {
  position: absolute;
  right: 0;
  top: 0;
- background-color:#222;
   /*
     background-image:url('/assets/example/bg_suburb.jpg');
     background-size:cover;
@@ -125,6 +124,7 @@ hr {
   background-color:#fff;
   padding-left:0;
   padding-right:0;
+  padding-top: 90px;
 }
 #main .img-circle {
  margin-top:18px;
@@ -133,8 +133,9 @@ hr {
 }
 
 #sidebar {
+  background-color: #394a59 !important;
   padding:0px;
-  padding-top:6px;
+  padding-top:75px;
 }
 
 #lg-menu{
@@ -151,13 +152,17 @@ hr {
 }
 
 #sidebar, #sidebar a, #sidebar-footer a {
-  color:#999;
+  color:#ebebeb;
   background-color:transparent;
   text-shadow:0 0 2px #000000;
   padding-left:5px;
 }
+#sidebar .nav li{
+  border-bottom: 1px solid #ebebeb;
+}
+
 #sidebar .nav li:hover {
-  background-color:#080808;
+  background-color:#2e3b46;
   color: #fff;
 }
 
@@ -561,15 +566,19 @@ small.text-muted {
                                                                      }
 
                                                                      #sidebar, #sidebar a, #sidebar-footer a {
-                                                                      color: #999;
+                                                                      color: #ebebeb;
                                                                       background-color: transparent;
                                                                       text-shadow: 0 0 2px #000000;
                                                                       padding-left: 0px;
                                                                     }
 
                                                                     .navbar {
-                                                                      position: relative;
+                                                                      position: fixed;
                                                                       min-height: 55px !important;
+                                                                      left:0;
+                                                                      right: 0;
+                                                                      z-index:1002;
+                                                                      background-color: #212C37;
                                                                       margin-bottom: 20px;
                                                                       border: 1px solid transparent;
                                                                     }
