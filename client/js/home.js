@@ -58,44 +58,49 @@ Template.home.events({
 });
 
 Template.results.events({
-	'click #hospitalSearch': function (e) {
+	'click #hospitalSearch': function (e){
 		e.preventDefault();
 		var areaLat;
+		var areaLog;
 		var hospType = $("#select1").val();
 		var areaCheck = $("#lat").val();
 		if(areaCheck == "")
 		{
-			areaLat = "Accra Metropolis"
+			areaLat = 5.644667699999999;
+			areaLog = -0.1525265999999874;
+
 		} 
 		else
 		{
 			areaLat =  $("#lat").val();
+			areaLog =  $("#log").val();
 		}
+
 		var feeRange 
 		if( $("#select").val()== "0  to 20 Ghc"){
 			feeRange = 20
 		} else if ($("#select").val()== "20 to 40 Ghc"){
-			feeRange =40
+			feeRange =40;
 		} else if ($("#select").val()== "40 to 100 Ghc"){
-			feeRange =100
+			feeRange =100;
 		} else if ($("#select").val()== "100 to 150 Ghc"){
-			feeRange =150
+			feeRange =150;
 		} else if ($("#select").val()== "150 and above"){
-			feeRange =200
+			feeRange =200;
 		};
 		
-
 		var searchResults = {
 			type: hospType,
-			location: areaLat,
+			locationLat: areaLat,
+			locationLog: areaLog,
 			range: feeRange
 		};
-		// console.log(searchResults);
-		//track
-		ga('send', 'event', 'Search in results', 'find click', 'Find Hospitals');
+		//Send a google analytic event to track this milestone
+		ga('send', 'event', 'Search', 'find click', 'Find Hospitals');
+
 		Router.go('results', searchResults );
 		return false;
-	}
+	} 
 });
 
 
