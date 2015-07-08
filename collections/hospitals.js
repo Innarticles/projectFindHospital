@@ -96,14 +96,16 @@ Schemas.Hospital = new SimpleSchema({
       ]
     }
   },
-  location: {
-    type: String,
-    optional: true,
+ location: {
+    type: [Number],
+    decimal: true,
     autoform: {
       type: 'map',
-      geolocation: true,
-      searchBox: true,
-      autolocate: true
+      afFieldInput:{
+        geolocation: true,
+        searchBox: true,
+        autolocate: true
+      }
     }
   },
   owner: {

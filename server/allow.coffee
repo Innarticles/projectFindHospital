@@ -16,11 +16,14 @@ Posts.allow
 
 Hospitals.allow
 	insert: (userId, doc) ->
-		userId == doc.owner
+		# userId == doc.owner
+		true
 	update: (userId, doc, fields, modifier) ->
-		userId == doc.owner
+		# userId == doc.owner
+		true
 	remove: (userId, doc) ->
-		userId == doc.owner
+		# userId == doc.owner
+		true
 
 Towns.allow
 	insert:  (userId, doc) ->

@@ -1,16 +1,20 @@
 Template.home.events({
 	'click #hospitalSearch': function (e) {
 		e.preventDefault();
-		var areaLocation;
+		var areaLat;
+		var areaLog;
 		var hospType = $("#select1").val();
 		var areaCheck = $("#lat").val();
 		if(areaCheck == "")
 		{
-			areaLocation = "Accra Metropolis";
+			areaLat = 5.644667699999999;
+			areaLog = -0.1525265999999874;
+
 		} 
 		else
 		{
-			areaLocation =  $("#lat").val();
+			areaLat =  $("#lat").val();
+			areaLog =  $("#log").val();
 		}
 
 		var feeRange 
@@ -28,7 +32,8 @@ Template.home.events({
 		
 		var searchResults = {
 			type: hospType,
-			location: areaLocation,
+			locationLat: areaLat,
+			locationLog: areaLog,
 			range: feeRange
 		};
 		//Send a google analytic event to track this milestone
@@ -55,16 +60,16 @@ Template.home.events({
 Template.results.events({
 	'click #hospitalSearch': function (e) {
 		e.preventDefault();
-		var areaLocation;
+		var areaLat;
 		var hospType = $("#select1").val();
 		var areaCheck = $("#lat").val();
 		if(areaCheck == "")
 		{
-			areaLocation = "Accra Metropolis"
+			areaLat = "Accra Metropolis"
 		} 
 		else
 		{
-			areaLocation =  $("#lat").val();
+			areaLat =  $("#lat").val();
 		}
 		var feeRange 
 		if( $("#select").val()== "0  to 20 Ghc"){
@@ -82,7 +87,7 @@ Template.results.events({
 
 		var searchResults = {
 			type: hospType,
-			location: areaLocation,
+			location: areaLat,
 			range: feeRange
 		};
 		// console.log(searchResults);

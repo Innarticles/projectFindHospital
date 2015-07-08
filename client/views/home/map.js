@@ -48,7 +48,7 @@ Template.home.onRendered(function () {
            }
 
            moveMarker(place.name, place.geometry.location);
-           $('.MapLat').val(place.address_components[1].long_name);
+           $('.MapLat').val(place.geometry.location.lat());
            $('.MapLon').val(place.geometry.location.lng());
        });
 

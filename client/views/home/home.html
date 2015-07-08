@@ -55,10 +55,20 @@
 
                                 <!-- <input id="searchTextField" type="text" class="form-control select-radius media-style"> -->
 
-                                <input type="text" id="lat" class="form-control typeahead select-radius media-style" placeholder="Area e.g Accra Metropolis" autocomplete="off" spellcheck="off" data-source="nba"/>
+                                <input id="searchTextField" type="text" class="form-control" style="text-align: left;width:200px;direction: ltr;" >
+
+
+
+                                <!-- <input type="text" id="lat" class="form-control typeahead select-radius media-style" placeholder="Area e.g Accra Metropolis" autocomplete="off" spellcheck="off" data-source="nba"/> -->
 
                             </div>
 
+                            <div class="form-group">
+                                <input name="latitude" id="lat"  class="form-control MapLat"  value="" type="text" placeholder="Latitude" style="width: 161px;" disabled>
+                            </div>
+                             <div class="form-group">
+                                <input name="logtitude" id="log"  class="form-control MapLon"  value="" type="text" placeholder="Logitude" style="width: 161px;" disabled>
+                            </div>
                             <div class="form-group">
                                 <label for="select" class="col-lg-2 control-label label-align mhide">Range</label>
                                 <div class="col-lg-10">
@@ -74,6 +84,7 @@
                             <div class="form-group">
 
                                 <a href="explore.html" id="hospitalSearch" class="btn btn-green isThemeBtn select-radius media-btn">Find Hospital</a>
+
 
                             </div>
                         </form>
